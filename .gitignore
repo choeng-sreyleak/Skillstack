@@ -1,0 +1,15 @@
+# Ignore Node modules
+node_modules/
+
+# Ignore Tailwind build output
+public/output.css
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+
+# IDE/editor folders
+.vscode/
+.idea/
