@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blue-custom': '#4A90E2',
+                        'purple-custom': '#667eea',
+                    }
+                }
+            }
+        }
+        // tailwind.config.js
+
+    </script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <style>
+        *{
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+
+}
+    </style>
+    <link rel="stylesheet" href="/e-learning-web-application/src/output.css">
+</head>
+<body class="bg-[#E9E9E9] min-h-screen">
+    <!-- Navigation -->
+    <header>
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img
+                src="../imgs/Logo.png"
+                alt="Learnode"
+                class="w-[120px] h-[120px]"
+              />
+              <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-0">
+              <a
+                href="#"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Course
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./AboutUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                About
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./contactUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Contact Us
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./myLearning.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                My Learning
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Desktop Login -->
+              <a
+                href="./login.html"
+                class="hidden md:inline-block bg-[#40a0d9] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+              >
+                <i class="fas fa-sign-in-alt mr-2"></i>Login
+              </a>
+
+              <!-- Mobile Menu Toggle -->
+              <button
+                id="mobileMenuToggle"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer transition-colors duration-300 dark:text-white dark:hover:bg-gray-700"
+              >
+                <i id="hamburgerIcon" class="fas fa-bars"></i>
+                <i id="closeIcon" class="fas fa-times hidden"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+        >
+          <!-- Mobile Login -->
+          <div class="flex justify-start px-6 py-3">
+            <a
+              href="./login.html"
+              class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
+            >
+              <i class="fas fa-sign-in-alt mr-1"></i>Login
+            </a>
+          </div>
+
+          <div class="px-6 pb-4 space-y-3">
+            <a
+              href="./course.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fa-solid fa-pager text-blue-500 mr-2"></i> Course
+            </a>
+            <a
+              href="./AboutUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500 mr-2"></i> About
+            </a>
+            <a
+              href="./contactUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-phone text-blue-500 mr-2"></i> Contact Us
+            </a>
+            <a
+              href="./myLearning.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-book text-blue-500 mr-2"></i>My Learning
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    
+    <div class="w-[90%] mx-auto   sm:p-0 md:3">
+        <!-- Welcome Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8 ">
+            <div class="mb-9 sm:p-2 lg:px-14 ">
+                <h1 class="text-3xl font-bold text-[#40A0D9] mb-2">Welcome back, Alex! 👋</h1>
+                <p class="text-[#434343] sm:text-base ">You're making great progress on your learning journey. Keep up the excellent work!</p>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4      p-2 md:p-9">
+                <div class="bg-[#40A0D9] text-white p-6 rounded-lg  text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="text-3xl font-bold">12</div>
+                    <div class="text-xl ">Courses Completed</div>
+                </div>
+                <div class="bg-[#40A0D9] text-white p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="text-3xl font-bold">5</div>
+                    <div class="text-xl">Active Courses</div>
+                </div>
+                <div class="bg-[#40A0D9] text-white p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="text-3xl font-bold">76%</div>
+                    <div class="text-xl">Overall Progress</div>
+                </div>
+                <div class="bg-[#40A0D9] text-white p-8 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="text-3xl font-bold">146h</div>
+                    <div class="text-xl">Total Study Time</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Courses Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6  ">
+            <div class="flex justify-between items-center mb-6 ">
+                <h2 class="text-2xl font-bold text-[#40A0D9]">My Courses</h2>
+                <span class="text-[#40A0D9] text-sm cursor-pointer hover:underline">View All</span>
+            </div>
+
+            <div class="space-y-3  ">
+               <!-- course 1 -->
+                 <div class="flex flex-col-reverse md:flex-row  items-center gap-5   bg-gray-100 rounded-lg  sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 "style=" box-shadow: -7px 0 0px 0px rgba(0, 182, 122, 5);">
+                    <div class="flex-1 ">
+                        <h3 class="font-semibold text-gray-800 text-lg mb-1">Natural Language with Python and spacy</h3>
+                        <p class="text-base text-[#434343] mb-2">By Student</p>
+                        <p class="text-base text-[#434343] mb-3">4 lessons • 35% Complete • 5 lessons remaining</p>
+                        
+                        <!-- Progress Bar -->
+                        <div class="w-2/3 bg-gray-200 rounded-full h-2 mb-0.5">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 35%"></div>
+                        </div>
+                        <p class="text-gray-500 mb-5 text-base"><i class="fa-regular fa-clock"></i>&nbsp; Due 22/7/2025</p>
+                        
+                        <div class="flex gap-2">
+                            <button class="font-semibold px-4 py-2 bg-gray-200 text-gray-700 rounded-md text-base hover:bg-gray-300">View Details</button>
+                            <button class="font-semibold px-4 py-2 bg-[#40A0D9] text-white rounded-md text-base hover:bg-blue-600">Continue Learning</button>
+                        </div>
+                    </div>
+                    <div class="w-[300px]  flex items-center justify-center">
+                        <img src="https://blog.eduonix.com/wp-content/uploads/2018/09/Scientific-Python-Scipy-696x500.jpg" alt="Database" class="rounded-lg max-w-full">
+                    </div>
+                </div>
+
+                <!-- course 2 -->
+                 <div class="flex flex-col-reverse md:flex-row  items-center gap-5   bg-gray-100 rounded-lg  sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 "style=" box-shadow: -7px 0 0px 0px rgba(0, 182, 122, 5);">
+                    <div class="flex-1 ">
+                        <h3 class="font-semibold text-gray-800 text-lg mb-1">Database Performance Testing and Optimization</h3>
+                        <p class="text-base text-[#434343] mb-2">By Student</p>
+                        <p class="text-base text-[#434343] mb-3">3 lessons • 70% Complete • 1 lessons remaining</p>
+                        
+                        <!-- Progress Bar -->
+                        <div class="w-2/3 bg-gray-200 rounded-full h-2 mb-0.5">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                        <p class="text-gray-500 mb-5 text-base"><i class="fa-regular fa-clock"></i>&nbsp; Due 22/7/2025</p>
+                        
+                        <div class="flex gap-2">
+                            <button class="font-semibold px-4 py-2 bg-gray-200 text-gray-700 rounded-md text-base hover:bg-gray-300">View Details</button>
+                            <button class="font-semibold px-4 py-2 bg-[#40A0D9] text-white rounded-md text-base hover:bg-blue-600">Continue Learning</button>
+                        </div>
+                    </div>
+                    <div class="w-[300px]  flex items-center justify-center">
+                        <img src="https://www.zucisystems.com/wp-content/uploads/2022/09/Database-2-scaled-1-scaled.webp" alt="Database" class="rounded-lg max-w-full">
+                    </div>
+                </div>
+
+                <!-- course 3  -->
+                 <div class="flex flex-col-reverse md:flex-row  items-center gap-5   bg-gray-100 rounded-lg  sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 "style=" box-shadow: -7px 0 0px 0px rgba(0, 182, 122, 5);">
+                    <div class="flex-1  ">
+                        <h3 class="font-semibold text-gray-800 text-lg mb-1">Mobile UI/UX Design and Javascript Patterns</h3>
+                        <p class="text-base text-[#434343] mb-3">8 lessons • 50% Complete • 4 lessons remaining</p>
+                        
+                        <!-- Progress Bar -->
+                        <div class="w-2/3 bg-gray-200 rounded-full h-2 mb-0.5">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 50%"></div>
+                        </div>
+                        <p class="text-gray-500 mb-5 text-base"><i class="fa-regular fa-clock"></i>&nbsp; Due 22/7/2025</p>
+                        
+                        <div class="flex gap-2">
+                            <button class="font-semibold px-4 py-2 bg-gray-200 text-gray-700 rounded-md text-base hover:bg-gray-300">View Details</button>
+                            <button class="font-semibold px-4 py-2 bg-[#40A0D9] text-white rounded-md text-base hover:bg-blue-600">Continue Learning</button>
+                        </div>
+                    </div>
+                    <div class="w-[300px]  flex items-center justify-center">
+                        <img src="https://api.reliasoftware.com/uploads/ux_ui_design_322afd6292.webp" alt="UX & UI design" class="rounded-lg max-w-full">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+        <!-- Learning Roadmap Section -->
+        <div class="bg-white rounded-lg shadow-lg  p-6 py-5 mb-6 ">
+            <h2 class="text-2xl font-bold text-[#40A0D9] mb-6">Learning Roadmap</h2>
+            
+            <div class="flex flex-col-reverse md:flex-row gap-6  sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 sm:mt-3">
+                <!-- Roadmap Items -->
+                <div class="flex-1 bg-gray-100 rounded-2xl my-5  items-center justify-center py-6">
+                    <div class="space-y-4 px-7">
+                        <!-- HTML & CSS Basics -->
+                        <div class="flex items-center rounded-lg gap-3 transition duration-300 hover:shadow-lg hover:scale-105">
+                            <div class="  flex items-center justify-center">
+                                <img src="https://futureteachinstitute.com/wp-content/uploads/2023/07/html-css-beginners.jpg" alt="html & css" class="rounded-full w-9 h-9">
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">HTML & CSS Basics</h3>
+                                <p class="text-base text-[#434343]">Completed foundational web development skills</p>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript Fundamentals -->
+                        <div class="flex items-center rounded-lg gap-3 transition duration-300 hover:shadow-lg hover:scale-105">
+                            <div class="  flex items-center justify-center">
+                                <img src="https://img.favpng.com/10/14/1/javascript-logo-html-comment-blog-png-favpng-ASBKnF5SBrAtVPTJjbg22zz1W.jpg" alt="javascript" class="rounded-full w-9 h-9">
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">JavaScript Fundamentals</h3>
+                                <p class="text-base text-[#434343]">Mastered core JavaScript concepts and ES6+</p>
+                            </div>
+                        </div>
+
+                        <!-- React Development -->
+                        <div class="flex items-center rounded-lg gap-3 transition duration-300 hover:shadow-lg hover:scale-105">
+                            <div class="  flex items-center justify-center">
+                                <img src="https://images-cdn.openxcell.com/wp-content/uploads/2024/07/25085005/reactjs-inner.svg" alt="React" class="rounded-full w-9 h-9">
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">React Development</h3>
+                                <p class="text-base text-[#434343]">Currently learning modern React with hooks</p>
+                            </div>
+                        </div>
+
+                        <!-- Node.js & Backend -->
+                        <div class="flex items-center rounded-lg gap-3 transition duration-300 hover:shadow-lg hover:scale-105">
+                            <div class="  flex items-center justify-center">
+                                <img src="https://www.mindrops.com/images/nodejs-image.webp" alt="Node.js" class="rounded-full w-9 h-9">
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800">Node.js & Backend</h3>
+                                <p class="text-base text-[#434343]">Upcoming: Server-side development with Node.js</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roadmap Visual -->
+                <div class="  p-4 ">
+                    <img src="https://pbs.twimg.com/media/F2JB2ocWsAExO8p?format=jpg&name=4096x4096" alt="roadmap" class="rounded-lg w-64 h-50">
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="bg-white rounded-lg shadow-lg lg:p-6 sm:p-1">
+            <h2 class="text-2xl p-6 font-bold text-[#40A0D9] lg:pl-0 mb-6">Achievements</h2>
+            
+            <div class="grid grid-cols-4  lg:gap-4  sm:gap-5  sm:p-4 lg:p-9 ">
+                <div class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="lg:text-3xl sm:text-xl mb-2">🏆</div>
+                    <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">First Course</div>
+                </div>
+                
+                <div class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="lg:text-3xl sm:text-xl mb-2">⭐</div>
+                    <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">Top Learner</div>
+                </div>
+                
+                <div class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="lg:text-3xl sm:text-xl mb-2">🔥</div>
+                    <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">7-Day Streak</div>
+                </div>
+                
+                <div class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105">
+                    <div class="lg:text-3xl sm:text-xl mb-2">📚</div>
+                    <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">Book worm</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-6">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Organized by Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Organized by
+            </h3>
+            <div class="flex items-center space-x-3">
+              <img
+                src="../imgs/ISTAD.png"
+                alt="Logo"
+                class="w-[100ox] h-[100px]"
+              />
+              <div class="text-sm">
+                <div class="font-medium">
+                  Institute of Science and Technology
+                </div>
+                <div class="text-gray-400">Advanced Development</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Course</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Course Categories Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Course Categories
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SkillStack Section -->
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <img
+                src="../imgs/Logo 2.png"
+                alt="Logo"
+                class="w-[130px] h-[130px]"
+              />
+              <h3 class="text-lg font-semibold">SKILLSTACK</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+              Empowering learners worldwide with quality education and skills
+              for the future.
+            </p>
+            <div class="flex space-x-3">
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition"
+                aria-label="Telegram"
+              >
+                <i class="fa-brands fa-telegram text-sm"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-gradient-to-tr from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+
+              <!-- Gmail -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition"
+                aria-label="Email"
+              >
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/e-learning-web-application/script/mylearnig.js"></script>
+</body>
+</html>
