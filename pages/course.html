@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKILLSTACK - Course Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+    <header>
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img
+                src="../imgs/Logo.png"
+                alt="Learnode"
+                class="w-[120px] h-[120px]"
+              />
+              <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-0">
+              <a
+                href="#"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Course
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./AboutUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                About
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./contactUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Contact Us
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./myLearning.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                My Learning
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Desktop Login -->
+              <a
+                href="./login.html"
+                class="hidden md:inline-block bg-[#40a0d9] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+              >
+                <i class="fas fa-sign-in-alt mr-2"></i>Login
+              </a>
+
+              <!-- Mobile Menu Toggle -->
+              <button
+                id="mobileMenuToggle"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer transition-colors duration-300 dark:text-white dark:hover:bg-gray-700"
+              >
+                <i id="hamburgerIcon" class="fas fa-bars"></i>
+                <i id="closeIcon" class="fas fa-times hidden"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+        >
+          <!-- Mobile Login -->
+          <div class="flex justify-start px-6 py-3">
+            <a
+              href="./login.html"
+              class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
+            >
+              <i class="fas fa-sign-in-alt mr-1"></i>Login
+            </a>
+          </div>
+
+          <div class="px-6 pb-4 space-y-3">
+            <a
+              href="./course.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fa-solid fa-pager text-blue-500 mr-2"></i> Course
+            </a>
+            <a
+              href="./AboutUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500 mr-2"></i> About
+            </a>
+            <a
+              href="./contactUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-phone text-blue-500 mr-2"></i> Contact Us
+            </a>
+            <a
+              href="./myLearning.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-book text-blue-500 mr-2"></i>My Learning
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-16">
+        <h1 class="text-4xl font-bold mb-4">Explore Our Courses</h1>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto">
+            Browse through our extensive collection of courses designed to help you master new skills and advance your career.
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Search and Filter -->
+        <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <div class="flex-1 relative">
+                <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                <input 
+                    type="text" 
+                    placeholder="Search courses..." 
+                    class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                />
+            </div>
+            <button class="flex items-center space-x-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                <span>Filter</span>
+                <i class="fas fa-filter"></i>
+            </button>
+        </div>
+
+        <!-- Course Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> 
+            <!-- Course Card 1 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+
+
+                <!-- Repeat the same courses for additional rows -->
+                <!-- Course Card 1 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 4 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+
+                 <!-- Repeat the same courses for additional rows -->
+                <!-- Course Card 1 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 4 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+
+                 <!-- Repeat the same courses for additional rows -->
+                <!-- Course Card 1 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+            <!-- Course Card 4 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                     alt="Git and GitHub" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600">
+                  Start version control and collaborate on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center items-center space-x-2 mt-12">
+        <!-- Left Arrow Button -->
+        <button
+            class="w-8 h-8 rounded-full bg-gray-600 text-white flex items-center justify-center"
+            aria-label="Previous Page">
+            <i class="fas fa-chevron-left text-sm" aria-hidden="true"></i>
+        </button>
+
+        <!-- Pagination Dots -->
+        <div class="flex space-x-2" role="group" aria-label="Page indicators">
+        <button
+            class="w-2 h-2 rounded-full bg-gray-400"
+            aria-label="Go to page 1">
+        </button>
+        <button
+            class="w-2 h-2 rounded-full bg-gray-400"
+            aria-label="Go to page 2">
+        </button>
+        <button
+            class="w-2 h-2 rounded-full bg-gray-600"
+            aria-label="Current page, page 3"
+            aria-current="page">
+        </button>
+        <button
+            class="w-2 h-2 rounded-full bg-gray-400"
+            aria-label="Go to page 4">
+        </button>
+    </div>
+
+  <!-- Right Arrow Button -->
+  <button
+    class="w-8 h-8 rounded-full bg-gray-600 text-white flex items-center justify-center"
+    aria-label="Next Page"
+  >
+    <i class="fas fa-chevron-right text-sm" aria-hidden="true"></i>
+  </button>
+</div>
+
+        <!-- </div> -->
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-6">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Organized by Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Organized by
+            </h3>
+            <div class="flex items-center space-x-3">
+              <img
+                src="../imgs/ISTAD.png"
+                alt="Logo"
+                class="w-[100ox] h-[100px]"
+              />
+              <div class="text-sm">
+                <div class="font-medium">
+                  Institute of Science and Technology
+                </div>
+                <div class="text-gray-400">Advanced Development</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Course</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Course Categories Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Course Categories
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SkillStack Section -->
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <img
+                src="../imgs/Logo 2.png"
+                alt="Logo"
+                class="w-[130px] h-[130px]"
+              />
+              <h3 class="text-lg font-semibold">SKILLSTACK</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+              Empowering learners worldwide with quality education and skills
+              for the future.
+            </p>
+            <div class="flex space-x-3">
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition"
+                aria-label="Telegram"
+              >
+                <i class="fa-brands fa-telegram text-sm"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-gradient-to-tr from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+
+              <!-- Gmail -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition"
+                aria-label="Email"
+              >
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+</body>
+</html>
