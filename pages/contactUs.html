@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --primary-color: #40a0d9;
+        --secondary-color: #434343;
+        --accent-color: #00b67a;
+        --background-color: #e9e9e9;
+        --text-color: #434343;
+        --white-color: #ffffff;
+        /* --border-color: #dee2e6; */
+        /* ==== font==== */
+        --font-family: "Ubuntu";
+        --font-size: 16px;
+
+        /* ====button=== */
+        --button-padding: 0.6em 1.2em;
+        --button-radius: 5px;
+        --button-font-weight: 600;
+        --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+    <!-- Navigation -->
+    <header>
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img
+                src="../imgs/Logo.png"
+                alt="Learnode"
+                class="w-[120px] h-[120px]"
+              />
+              <a href="../index.html"><h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1></a>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-0">
+              <a
+                href="#"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Course
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./AboutUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                About
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./contactUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Contact Us
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./myLearning.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                My Learning
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Desktop Login -->
+              <a
+                href="./login.html"
+                class="hidden md:inline-block bg-[--primary-color] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+              >
+                <i class="fas fa-sign-in-alt mr-2"></i>Login
+              </a>
+
+              <!-- Mobile Menu Toggle -->
+              <button
+                id="mobileMenuToggle"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer transition-colors duration-300 dark:text-white dark:hover:bg-gray-700"
+              >
+                <i id="hamburgerIcon" class="fas fa-bars"></i>
+                <i id="closeIcon" class="fas fa-times hidden"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+        >
+          <!-- Mobile Login -->
+          <div class="flex justify-start px-6 py-3">
+            <a
+              href="./login.html"
+              class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
+            >
+              <i class="fas fa-sign-in-alt mr-1"></i>Login
+            </a>
+          </div>
+
+          <div class="px-6 pb-4 space-y-3">
+            <a
+              href="./course.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fa-solid fa-pager text-blue-500 mr-2"></i> Course
+            </a>
+            <a
+              href="./AboutUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500 mr-2"></i> About
+            </a>
+            <a
+              href="./contactUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-phone text-blue-500 mr-2"></i> Contact Us
+            </a>
+            <a
+              href="./myLearning.html"
+              class="flex items-center px-3 py-2 text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-book text-blue-500 mr-2"></i>My Learning
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="bg-[--primary-color] dark:bg-gray-700 text-center p-9 text-white mt-16"
+      >
+        <h1 class="text-3xl font-bold">Explore Our Courses</h1>
+        <h2 class="mt-2">
+          Browse through our collection of courses to master skills and boost
+          your career.
+        </h2>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-screen-xl mx-auto px-4 py-10">
+      <!-- Contact Intro -->
+      <div class="text-center mb-10">
+        <h1 class="text-3xl font-bold">Get in touch</h1>
+        <p class="mt-2">
+          Have questions or need assistance? Reach out to us via the options
+          below. We're happy to help!
+        </p>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow text-center"
+        >
+          <i class="fa-solid fa-headphones text-3xl mb-2"></i>
+          <h2 class="text-xl font-bold mb-2">Help & Support</h2>
+          <p class="mb-4">
+            Need help with purchases, login issues, or software problems? We've
+            got you covered.
+          </p>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+          >
+            Help Centre
+          </button>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow text-center"
+        >
+          <i class="fa-solid fa-computer text-3xl mb-2"></i>
+          <h2 class="text-xl font-bold mb-2">Info about our products</h2>
+          <p class="mb-4">
+            Want to know how our services can benefit your organization? Contact
+            us today.
+          </p>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+          >
+            Sales Inquiry
+          </button>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow text-center"
+        >
+          <i class="fa-solid fa-people-group text-3xl mb-2"></i>
+          <h2 class="text-xl font-bold mb-2">Work with us</h2>
+          <p class="mb-4">
+            Submit your proposal and our team will connect with you to find the
+            best fit.
+          </p>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+          >
+            Submit your RFP
+          </button>
+        </div>
+      </div>
+
+      <!-- Map and Contact Details -->
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow overflow-hidden"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?..."
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-3">Contact Details</h3>
+          <p><i class="fa-solid fa-envelope"></i> info@skillstack.co.uk</p>
+          <p><i class="fa-solid fa-phone"></i> 01943 885086</p>
+          <p><i class="fa-solid fa-clock"></i> Mon–Fri 09:00–17:30</p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Leeds - UK Head Office<br />The
+            Coach Works, 21 The Calls, Leeds, LS2 7EH
+          </p>
+          <p class="mt-4 text-sm">
+            Together we're going to take our vision of learning that drives
+            change even further.
+          </p>
+        </div>
+      </div>
+
+      <!-- Message Form -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-bold mb-6 text-center">Messages</h2>
+        <form id="contactForm" class="grid gap-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block mb-1">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                class="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label for="email" class="block mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your email"
+                required
+                class="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="message" class="block mb-1">Message</label>
+            <textarea
+              id="message"
+              placeholder="Write your message..."
+              rows="4"
+              required
+              class="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded w-fit"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Organized by Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Organized by
+            </h3>
+            <div class="flex items-center space-x-3">
+              <img
+                src="../imgs/ISTAD.png"
+                alt="Logo"
+                class="w-[100ox] h-[100px]"
+              />
+              <div class="text-sm">
+                <div class="font-medium">
+                  Institute of Science and Technology
+                </div>
+                <div class="text-gray-400">Advanced Development</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Course</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Course Categories Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Course Categories
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SkillStack Section -->
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <img
+                src="../imgs/Logo 2.png"
+                alt="Logo"
+                class="w-[130px] h-[130px]"
+              />
+              <h3 class="text-lg font-semibold">SKILLSTACK</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+              Empowering learners worldwide with quality education and skills
+              for the future.
+            </p>
+            <div class="flex space-x-3">
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition"
+                aria-label="Telegram"
+              >
+                <i class="fa-brands fa-telegram text-sm"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-gradient-to-tr from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+
+              <!-- Gmail -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition"
+                aria-label="Email"
+              >
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../script/ContactUs.js"></script>
+  </body>
+</html>
