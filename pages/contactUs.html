@@ -1,0 +1,142 @@
+<!-- using tailwind and html -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">  
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <header>
+    <nav class="bg-[#d9d9d9] border-b border-gray-400 ">
+      <div class="max-w-screen-xl mx-auto px-4 py-2 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <img src="/index.html/Untitled-1.png" alt="Logo" class="w-20 h-20" />
+          <span class="font-semibold italic text-gray-800">SKILLSTACK</span>
+        </div>
+        <nav class="hidden md:flex space-x-6 text-sm text-gray-700 ">
+          <a href="#" class="hover:text-blue-400">Course</a>
+          <a href="#" class="hover:text-blue-400">About</a>
+          <a href="#" class="hover:text-blue-400">Contact US</a>
+          <a href="#" class="hover:text-blue-400">My Learning</a>
+        </nav>
+        <div class="flex space-x-2">
+          <button
+            class="bg-[#40A0D9] text-white text-sm font-semibold px-4 py-1 rounded-full  hover:bg-blue-400">Login</button>
+          <button class=" bg-white text-sm font-semibold px-4 py-1 rounded-full  hover:bg-gray-300">SignUp</button>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-[#40A0D9] text-center items-center p-9  text-white">
+      <h1 class="text-3xl font-u">Explore Our Courses</h1>
+      <h2 class="font-ubutu-bold"><br>Browse through our extensive collection of courses designed to help you master new skills and <br>
+        advance your career.</h2>
+    </div>
+ 
+
+  <!-- Container -->
+  <div class=" mx-auto px-4 py-10 p-8 " 
+      style="background-color: #e9e9e9; font-size: 16px;">
+    
+    <!-- Header -->
+  
+    <div class=" mt-4 mb-4 text-center" >
+      <h1 class="text-3xl font-bold text-gray-950 text-center "
+          style="font-family: ubuntu;">
+      Get in touch</h1>
+      <p class="text-black mt-2">
+      Have questions or need assistance? We are here to help. Reach out to us through any of the forms below, email or phone and we will get back to you as soon as possible. We look forward to hearing from you.</p>
+    </div>
+
+    <!--  Cards 1 -->
+  
+    <div class="grid grid-cols-3 gap-6 mt-4 "
+          style="font-family: ubuntu; font-size: 16px; ">
+      <div class="bg-white p-6 rounded-xl shadow text-center">
+        <h1 class="text-xl font-bold text-gray-800 mb-2" >
+         <i class="fa-solid fa-headphones text-3xl mb-2"></i>
+         <br> Help & Support</h1>
+        <p class="text-black mb-2">
+          If  you’re having difficulty purchasing our products online, logging in or using our courses or software then we are here to help.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+                >Help Centre</button>
+      </div>
+
+      <!-- card 2 -->
+      <div class="bg-white p-6 rounded-xl shadow text-center">
+        <i class="fa-solid fa-computer text-3xl mb-2"></i>
+       <br>
+        <h2 class="text-xl font-bold text-black mb-2"
+        style="font-family: ubuntu; font-size: 16px; ">
+          Info about our products</h2>
+        <p class=" text-black mb-4 font-normal">
+         If you want to learn more about how our services can help your organisation meet its training needs, then please get in touch.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Sales Inquiry</button>
+      </div>
+
+      <!-- card 3 -->
+      <div class="bg-white p-6 rounded-xl shadow text-center"> 
+        <i class="fa-solid fa-people-group text-3xl mb-2"></i>
+        <br>
+        <h3 class="text-xl font-bold text-gray-800 mb-2"
+      style="font-family: ubuntu; font: size 16px; ">
+          Work with us</h3>
+        <p class="text-black mb-4">Looking to work with us? Submit your request for proposal and one of our bids team will be in touch to discuss the perfect solution for you.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Submit your RFP</button>
+      </div>
+    </div>
+
+    <!-- Map and details -->
+     <br>
+     <br>
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Google Map -->
+      <div class="bg-white rounded-xl shadow overflow-hidden">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6174341853706!2d-73.98823492404067!3d40.75889097138056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1642534825456!5m2!1sen!2sus"
+          width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="bg-white p-6 rounded-xl shadow  "
+           style="font-family: ubuntu;  font-size: 16px;">
+        <h3 class="text-xl font-bold  text-gray-800 mb-3">
+          Contact Details</h3>
+        <p ><i class="fa-solid fa-envelope mb-2"></i> info@skillstack.co.uk</p>
+        <p ><i class="fa-solid fa-phone mb-2"></i> 01943 885086</p>
+        <p ><i class="fa-solid fa-clock mb-2"></i> Mon–Fri 09:00–17:30</p>
+        <p ><i class="fa-solid fa-location-dot mb-2"></i> eeds - UK Head Office <br>The Coach Works, 21 The Calls, Leeds, LS2 7EH</p>
+        <p class="mt-4 text-sm text-gray-900  mb-2"
+        style="font-family: ubuntu;font-size: 16px;">Together we’re going to take our vision of learning that drives change
+even further.</p>
+      </div>
+    </div>
+
+    <!-- Message Form -->
+    <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center"
+          style="font-family: ubuntu; font-size: 16px;">Messages</h2>
+      <form id="contactForm" class="grid gap-4">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block font-normal text-gray-700 mb-1">Name</label>
+            <input type="text" id="name" placeholder="Your name" class="w-full border border-gray-300 rounded px-3 py-2">
+          </div>
+
+          <div>
+            <label for="email" class="block font-normal text-gray-700 mb-1">Email</label>
+            <input type="email" id="email" placeholder="Your email" required class="w-full border border-gray-300 rounded px-3 py-2">
+          </div>
+        </div>
+
+        <div>
+          <label for="message" class="block font-normal text-gray-700 mb-1">Message</label>
+          <textarea id="message" placeholder="text your messages" rows="3" required class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+        </div>
+         <button type="submit" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 mt-2 w-fit">Send Message</button>
+ </header>
+</body>
+</html>
