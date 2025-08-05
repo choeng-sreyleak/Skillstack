@@ -1,33 +1,958 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- tailwindcss -->
-  <link href="src/output.css" rel="stylesheet">
-  <title>SkillStack</title>
-  <!-- SEO Meta -->
-  <meta name="description" content="Learn full-stack development from beginner to job-ready with real-world projects. Anytime. Anywhere." />
-  <meta name="keywords" content="e-learning, web development, full stack, online courses, SkillStack, coding, programming" />
-  <meta name="author" content="SkillStack Team" />
 
-  <!-- Open Graph (for social sharing) -->
-  <meta property="og:title" content="SkillStack - Learn technology" />
-  <meta property="og:description" content="Full-stack web development courses to take you from beginner to pro." />
-  <meta property="og:image" content="#" />
-  <meta property="og:url" content="https://skillstack.com" />
-  <meta property="og:type" content="website" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillStack - Master Web Development</title>
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Learn full-stack development from beginner to job-ready with real-world projects. Anytime. Anywhere."
+    />
+    <meta
+      name="keywords"
+      content="e-learning, web development, full stack, online courses, SkillStack, coding, programming"
+    />
+    <meta name="author" content="SkillStack Team" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="#" />
-  <meta name="twitter:title" content="SkillStack - Web Development Courses" />
-  <meta name="twitter:description" content="Join our platform to master full-stack development skills." />
-  <meta name="twitter:image" content="#" />
+    <!-- Open Graph (for social sharing) -->
+    <meta property="og:title" content="SkillStack - Learn technology" />
+    <meta
+      property="og:description"
+      content="Full-stack web development courses to take you from beginner to pro."
+    />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="https://skillstack.com" />
+    <meta property="og:type" content="website" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="#" />
-</head>
-<body>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="#" />
+    <meta name="twitter:title" content="SkillStack - Web Development Courses" />
+    <meta
+      name="twitter:description"
+      content="Join our platform to master full-stack development skills."
+    />
+    <meta name="twitter:image" content="#" />
 
-</body>
+    <!-- Favicon -->
+    <link rel="icon" href="#" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              secondary: "#434343",
+              accent: "#06b6d4",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --primary-color: #40a0d9;
+        --secondary-color: #434343;
+        --accent-color: #00b67a;
+        --background-color: #e9e9e9;
+        --text-color: #434343;
+        --white-color: #ffffff;
+        /* --border-color: #dee2e6; */
+        /* ==== font==== */
+        --font-family: "Ubuntu";
+        --font-size: 16px;
+
+        /* ====button=== */
+        --button-padding: 0.6em 1.2em;
+        --button-radius: 5px;
+        --button-font-weight: 600;
+        --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <!-- ========================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img
+                src="../imgs/Logo.png"
+                alt="Learnode"
+                class="w-[120px] h-[120px]"
+              />
+              <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-0">
+              <a
+                href="#"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Course
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./AboutUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                About
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./contactUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Contact Us
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./myLearning.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                My Learning
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Desktop Login -->
+              <a
+                href="./login.html"
+                class="hidden md:inline-block bg-[--primary-color] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+              >
+                <i class="fas fa-sign-in-alt mr-2"></i>Login
+              </a>
+
+              <!-- Mobile Menu Toggle -->
+              <button
+                id="mobileMenuToggle"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer transition-colors duration-300 dark:text-white dark:hover:bg-gray-700"
+              >
+                <i id="hamburgerIcon" class="fas fa-bars"></i>
+                <i id="closeIcon" class="fas fa-times hidden"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+        >
+          <!-- Mobile Login -->
+          <div class="flex justify-start px-6 py-3">
+            <a
+              href="./login.html"
+              class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
+            >
+              <i class="fas fa-sign-in-alt mr-1"></i>Login
+            </a>
+          </div>
+
+          <div class="px-6 pb-4 space-y-3">
+            <a
+              href="./course.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fa-solid fa-pager text-blue-500 mr-2"></i> Course
+            </a>
+            <a
+              href="./AboutUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500 mr-2"></i> About
+            </a>
+            <a
+              href="./contactUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-phone text-blue-500 mr-2"></i> Contact Us
+            </a>
+            <a
+              href="./myLearning.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-book text-blue-500 mr-2"></i>My Learning
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="bg-[--primary-color] text-white text-center py-3 mt-16 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+      >
+        <p class="text-sm font-medium">Explore our new website today!</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="bg-[--background-color] py-20 dark:bg-black dark:text-white transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+              <h1
+                class="text-5xl font-bold text-[--secondary-color] dark:text-white leading-tight"
+              >
+                Master Web
+                <span class="text-[--primary-color] dark:text-[--white-color]"
+                  >Development</span
+                >.<br />
+                <span class="text-[--secondary-color] dark:text-white"
+                  >Anytime.</span
+                >
+                <span class="text-[--primary-color]"> Anywhere.</span>
+              </h1>
+              <p class="text-xl text-gray-600 dark:text-white leading-relaxed">
+                Learn full-stack development with real-world projects.<br />
+                From beginner to job-ready.
+              </p>
+              <div class="flex space-x-4">
+                <button
+                  class="bg-[--primary-color] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#00A0FF] transform hover:scale-105 transition-all duration-200"
+                >
+                  Browse Courses
+                </button>
+                <button
+                  class="border border-gray-300 text-gray-700 dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                >
+                  Start Free Trial
+                </button>
+              </div>
+            </div>
+            <div class="relative">
+              <img src="../imgs/hero_pic.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Courses -->
+      <section
+        class="py-20 bg-white dark:bg-gray-900 dark:text-white transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12"
+          >
+            Featured Courses
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Course 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group dark:bg-gray-700 dark:text-white transition-colors duration-300"
+            >
+              <div class="w-full h-48 flex items-center justify-center">
+                <img
+                  src="../imgs/htmlCourse.png"
+                  alt=""
+                  class="w-[90%] h-[90%] object-cover rounded"
+                />
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-2 dark:text-white"
+                >
+                  Web Development
+                </h3>
+                <p class="text-gray-600 mb-4 dark:text-white">
+                  Master HTML, CSS, and JavaScript fundamentals with hands-on
+                  projects and real-world applications.
+                </p>
+                <div class="flex items-center space-x-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927C9.3 2.068 10.7 2.068 10.951 2.927L12.1 6.95l4.186.61c.969.14 1.356 1.33.654 2.01l-3.027 2.951.714 4.166c.165.964-.85 1.7-1.712 1.247L10 15.347l-3.734 1.957c-.862.453-1.877-.283-1.712-1.247l.714-4.166-3.027-2.951c-.702-.68-.315-1.87.654-2.01l4.186-.61 1.149-4.023z"
+                    />
+                  </svg>
+                  <span class="text-gray-600 dark:text-white"
+                    >4.8 (120 reviews)</span
+                  >
+                </div>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-2xl font-bold text-blue-600 dark:text-blue-300"
+                    >$49</span
+                  >
+                  <div class="flex items-center">
+                    <span class="text-yellow-400 mr-1">★</span>
+                    <span class="text-gray-600 dark:text-white">4.8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Course 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group dark:bg-gray-700 dark:text-white transition-colors duration-300"
+            >
+              <div class="w-full h-48 flex items-center justify-center">
+                <img
+                  src="../imgs/htmlCourse.png"
+                  alt=""
+                  class="w-[90%] h-[90%] object-cover rounded"
+                />
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-2 dark:text-white"
+                >
+                  Web Development
+                </h3>
+                <p class="text-gray-600 mb-4 dark:text-white">
+                  Master HTML, CSS, and JavaScript fundamentals with hands-on
+                  projects and real-world applications.
+                </p>
+                <div class="flex items-center space-x-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927C9.3 2.068 10.7 2.068 10.951 2.927L12.1 6.95l4.186.61c.969.14 1.356 1.33.654 2.01l-3.027 2.951.714 4.166c.165.964-.85 1.7-1.712 1.247L10 15.347l-3.734 1.957c-.862.453-1.877-.283-1.712-1.247l.714-4.166-3.027-2.951c-.702-.68-.315-1.87.654-2.01l4.186-.61 1.149-4.023z"
+                    />
+                  </svg>
+                  <span class="text-gray-600 dark:text-white"
+                    >4.8 (120 reviews)</span
+                  >
+                </div>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-2xl font-bold text-blue-600 dark:text-blue-300"
+                    >$49</span
+                  >
+                  <div class="flex items-center">
+                    <span class="text-yellow-400 mr-1">★</span>
+                    <span class="text-gray-600 dark:text-white">4.8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Course 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group dark:bg-gray-700 dark:text-white transition-colors duration-300"
+            >
+              <div class="w-full h-48 flex items-center justify-center">
+                <img
+                  src="../imgs/htmlCourse.png"
+                  alt=""
+                  class="w-[90%] h-[90%] object-cover rounded"
+                />
+              </div>
+              <div class="p-6">
+                <h3
+                  class="text-xl font-semibold text-gray-900 mb-2 dark:text-white"
+                >
+                  Web Development
+                </h3>
+                <p class="text-gray-600 mb-4 dark:text-white">
+                  Master HTML, CSS, and JavaScript fundamentals with hands-on
+                  projects and real-world applications.
+                </p>
+                <div class="flex items-center space-x-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927C9.3 2.068 10.7 2.068 10.951 2.927L12.1 6.95l4.186.61c.969.14 1.356 1.33.654 2.01l-3.027 2.951.714 4.166c.165.964-.85 1.7-1.712 1.247L10 15.347l-3.734 1.957c-.862.453-1.877-.283-1.712-1.247l.714-4.166-3.027-2.951c-.702-.68-.315-1.87.654-2.01l4.186-.61 1.149-4.023z"
+                    />
+                  </svg>
+                  <span class="text-gray-600 dark:text-white"
+                    >4.8 (120 reviews)</span
+                  >
+                </div>
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-2xl font-bold text-blue-600 dark:text-blue-300"
+                    >$49</span
+                  >
+                  <div class="flex items-center">
+                    <span class="text-yellow-400 mr-1">★</span>
+                    <span class="text-gray-600 dark:text-white">4.8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section
+        class="py-20 bg-gray-50 dark:bg-gray-900 dark:text-white transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-8 dark:text-white">
+                Why Choose SKILLSTACK?
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Self-paced learning
+                    </h3>
+                    <p class="text-gray-600 dark:text-white">
+                      Learn at your own speed with lifetime access to course
+                      materials.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dakr:text-white"
+                    >
+                      Expert instructors and mentorship
+                    </h3>
+                    <p class="text-gray-600 dark:text-white">
+                      Learn from industry professionals with years of
+                      experience.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Flexible online learning experience
+                    </h3>
+                    <p class="text-gray-600 dark:text-white">
+                      Access courses from anywhere, on any device, at any time.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Advanced skill-level training
+                    </h3>
+                    <p class="text-gray-600 dark:text-white">
+                      Progress from beginner to advanced with structured
+                      learning paths.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Internationally recognized
+                    </h3>
+                    <p class="text-gray-600 dark:text-white">
+                      Earn certificates recognized by employers worldwide.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div
+                      class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3
+                      class="text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      Build an impressive portfolio
+                    </h3>
+                    <p class="text-gray-600 dark:text-white">
+                      Create real projects that showcase your skills to
+                      potential employers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <img
+                src="../imgs/why.jpg"
+                alt=""
+                class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section
+        class="py-20 bg-white dark:bg-gray-900 dark:text-white transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl font-bold text-center text-gray-900 mb-12 dark:text-white"
+          >
+            What Our Students Say
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- ========Testimonils card1========= -->
+            <div
+              class="bg-gray-50 rounded-xl p-6 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+            >
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400">
+                  <span>★★★★★</span>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4">"Easy to find classes"</p>
+              <p class="text-gray-600 text-sm mb-4 dark:text-white">
+                SkillStack has user-friendly course navigation that makes
+                finding the right classes incredibly simple and intuitive.
+              </p>
+              <div class="flex items-center">
+                <!-- <div class="w-10 h-10 bg-blue-500 rounded-full mr-3"></div> -->
+                <img
+                  src="../imgs/profile.jpeg"
+                  alt="profile"
+                  class="w-10 h-10 bg-blue-500 rounded-full mr-3"
+                />
+                <div>
+                  <p class="font-semibold text-gray-900 dark:text-white">
+                    Sarah Chen
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- ========Testimonils card2========== -->
+            <div
+              class="bg-gray-50 rounded-xl p-6 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+            >
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400">
+                  <span>★★★★★</span>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4 dark:text-white">
+                "It was a quick and easy process to learn the concepts. The
+                course was well-structured and the instructor made complex
+                topics simple to understand."
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="../imgs/profile3.jpeg"
+                  alt="profile"
+                  class="w-10 h-10 bg-blue-500 rounded-full mr-3"
+                />
+                <div>
+                  <p class="font-semibold text-gray-900 dark:text-white">
+                    Chem Dara
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- ========Testimonils card3========== -->
+            <div
+              class="bg-gray-50 rounded-xl p-6 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+            >
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-400">
+                  <span>★★★★★</span>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4 dark:text-white">
+                "Excellent and affordable →"
+              </p>
+              <p class="text-gray-600 text-sm mb-4 dark:text-white">
+                The quality of education provided is outstanding, and the
+                pricing makes it accessible to everyone wanting to learn.
+              </p>
+              <div class="flex items-center">
+                <img
+                  src="../imgs/profile2.jpeg"
+                  alt="profile"
+                  class="w-10 h-10 bg-blue-500 rounded-full mr-3"
+                />
+                <div>
+                  <p class="font-semibold text-gray-900 dark:text-white">
+                    Lisa San
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination dots -->
+          <div class="flex justify-center mt-8 space-x-2">
+            <button class="w-2 h-2 bg-gray-300 rounded-full"></button>
+            <button class="w-2 h-2 bg-blue-600 rounded-full"></button>
+            <button class="w-2 h-2 bg-gray-300 rounded-full"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section
+        class="py-20 bg-[--primary-color] dark:bg-gray-700 dark:text-white transition-colors duration-300"
+      >
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-white mb-4">
+            Ready to Start Learning!
+          </h2>
+          <p class="text-xl text-blue-100 mb-8">
+            Join thousands of students already learning with SkillStack and
+            advance your career today.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <button
+              class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-200"
+            >
+              Get Started
+            </button>
+            <button
+              class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Organized by Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Organized by
+            </h3>
+            <div class="flex items-center space-x-3">
+              <img
+                src="../imgs/ISTAD.png"
+                alt="Logo"
+                class="w-[100ox] h-[100px]"
+              />
+              <div class="text-sm">
+                <div class="font-medium">
+                  Institute of Science and Technology
+                </div>
+                <div class="text-gray-400">Advanced Development</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Course</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Course Categories Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Course Categories
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SkillStack Section -->
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <img
+                src="../imgs/Logo 2.png"
+                alt="Logo"
+                class="w-[130px] h-[130px]"
+              />
+              <h3 class="text-lg font-semibold">SKILLSTACK</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+              Empowering learners worldwide with quality education and skills
+              for the future.
+            </p>
+            <div class="flex space-x-3">
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition"
+                aria-label="Telegram"
+              >
+                <i class="fa-brands fa-telegram text-sm"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-gradient-to-tr from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+
+              <!-- Gmail -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition"
+                aria-label="Email"
+              >
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script/main.js"></script>
+  </body>
 </html>
