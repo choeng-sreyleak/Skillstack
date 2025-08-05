@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: flex;
+        }
+        .education-icon {
+            background: linear-gradient(135deg, #4fd1c7, #14b8a6);
+        }
+        .form-container {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .input-field {
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        .illustration {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 font-sans">
+
+
+    <!-- Login Page -->
+    <div id="loginPage" class="page active min-h-screen items-center justify-center p-4">
+        <div class="flex max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <!-- Left Side - Illustration -->
+            <div class="hidden md:flex md:w-1/2 illustration p-12 items-center justify-center relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500"></div>
+                <div class="relative z-10 text-center">
+                    <!-- Education Icons -->
+                    <div class="flex justify-center space-x-4 mb-8">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Laptop Illustration -->
+                    <div class="relative mx-auto w-64 h-40">
+                        <div class="bg-gray-800 rounded-t-lg p-2 h-32">
+                            <div class="bg-white rounded h-full relative overflow-hidden">
+                                <div class="absolute top-2 left-2 w-2 h-2 bg-red-400 rounded-full"></div>
+                                <div class="absolute top-2 left-6 w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                <div class="absolute top-2 left-10 w-2 h-2 bg-green-400 rounded-full"></div>
+                                <div class="mt-8 px-4">
+                                    <div class="h-1 bg-gray-200 rounded mb-2"></div>
+                                    <div class="h-1 bg-gray-200 rounded mb-2"></div>
+                                    <div class="h-1 bg-blue-400 rounded w-3/4"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-700 h-2 rounded-b-lg"></div>
+                        <div class="bg-gray-600 h-4 w-20 mx-auto rounded-b-lg"></div>
+                        <!-- Cursor -->
+                        <div class="absolute top-16 right-20 transform rotate-12">
+                            <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Login Form -->
+            <div class="w-full md:w-1/2 p-16 flex items-center justify-center">
+                <div class="w-full max-w-lg">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Login</h2>
+                    
+                    <form id="loginForm" class="space-y-8">
+                        <div class="relative">
+                            <input 
+                                type="email" 
+                                id="loginEmail"
+                                placeholder="Email" 
+                                class="input-field w-full px-6 py-4 pr-14 text-lg border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                            >
+                            <svg class="absolute right-5 top-4 w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </div>
+
+                        <div class="relative">
+                            <input 
+                                type="password" 
+                                id="loginPassword"
+                                placeholder="Password" 
+                                class="input-field w-full px-6 py-4 pr-14 text-lg border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                            >
+                            <svg class="absolute right-5 top-4 w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+
+                        <button 
+                            type="submit" 
+                            class="btn-primary w-full py-4 text-lg text-white font-semibold rounded-xl hover:shadow-lg transform transition-all duration-300"
+                        >
+                            Login
+                        </button>
+                    </form>
+
+                    <div class="mt-8 flex justify-between text-base">
+                        <button id="createAccount" class="text-blue-600 hover:text-blue-800 transition-colors">
+                            Create an account
+                        </button>
+                        <button class="text-blue-600 hover:text-blue-800 transition-colors">
+                            Forgot password?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Success Page -->
+    <div id="signupSuccessPage" class="page min-h-screen items-center justify-center p-4">
+        <div class="max-w-md mx-auto bg-white rounded-3xl shadow-2xl p-12 text-center">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Account Created Successfully!</h2>
+            <p class="text-gray-600 mb-8">Your account has been created successfully. You can now login with your credentials.</p>
+            <button id="goToLogin" class="btn-primary w-full py-3 text-white font-semibold rounded-lg hover:shadow-lg transform transition-all duration-300">
+                Go to Login
+            </button>
+        </div>
+    </div>
+
+    <!-- Login Success Page -->
+    <div id="loginSuccessPage" class="page min-h-screen items-center justify-center p-4">
+        <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl p-12">
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome Back!</h2>
+                <p class="text-gray-600">Login successful. Here's your account information:</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl p-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Email</p>
+                            <p id="userEmail" class="font-semibold text-gray-800">-</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Login Date</p>
+                            <p id="loginDate" class="font-semibold text-gray-800">-</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Login Time</p>
+                            <p id="loginTime" class="font-semibold text-gray-800">-</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Status</p>
+                            <p class="font-semibold text-green-600">Active</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button id="backToLogin" class="flex-1 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+                    Back to Login
+                </button>
+                <!-- <button class="flex-1 btn-primary py-3 text-white font-semibold rounded-lg hover:shadow-lg transform transition-all duration-300">
+                    Continue to Dashboard
+                </button> -->
+                <a href="../pages/Homepage.html" class="flex-1 btn-primary py-3 text-white text-center font-semibold rounded-lg hover:shadow-lg transform transition-all duration-300"> Explore SkillStack</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Page -->
+    <div id="signupPage" class="page min-h-screen items-center justify-center p-4">
+        <div class="flex max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+            <!-- Left Side - Sign Up Form -->
+            <div class="w-full md:w-1/2 p-16 flex items-center justify-center">
+                <div class="w-full max-w-lg">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-12 text-center">Sign Up</h2>
+                    
+                    <form id="signupForm" class="space-y-8">
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                id="signupUsername"
+                                placeholder="User name" 
+                                class="input-field w-full px-6 py-4 pr-14 text-lg border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                            >
+                            <svg class="absolute right-5 top-4 w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+
+                        <div class="relative">
+                            <input 
+                                type="email" 
+                                id="signupEmail"
+                                placeholder="Email" 
+                                class="input-field w-full px-6 py-4 pr-14 text-lg border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                            >
+                            <svg class="absolute right-5 top-4 w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </div>
+
+                        <div class="relative">
+                            <input 
+                                type="password" 
+                                id="signupPassword"
+                                placeholder="Password" 
+                                class="input-field w-full px-6 py-4 pr-14 text-lg border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                required
+                            >
+                            <svg class="absolute right-5 top-4 w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+
+                        <button 
+                            type="submit" 
+                            class="btn-primary w-full py-4 text-lg text-white font-semibold rounded-xl hover:shadow-lg transform transition-all duration-300"
+                        >
+                            Sign up
+                        </button>
+                    </form>
+
+                    <div class="mt-8 text-center">
+                        <button id="alreadyHaveAccount" class="text-base text-blue-600 hover:text-blue-800 transition-colors">
+                            Already have an account
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Illustration -->
+            <div class="hidden md:flex md:w-1/2 illustration p-12 items-center justify-center relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500"></div>
+                <div class="relative z-10 text-center">
+                    <!-- Education Icons -->
+                    <div class="flex justify-center space-x-4 mb-8">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Laptop Illustration -->
+                    <div class="relative mx-auto w-64 h-40">
+                        <div class="bg-gray-800 rounded-t-lg p-2 h-32">
+                            <div class="bg-white rounded h-full relative overflow-hidden">
+                                <div class="absolute top-2 left-2 w-2 h-2 bg-red-400 rounded-full"></div>
+                                <div class="absolute top-2 left-6 w-2 h-2 bg-yellow-400 rounded-full"></div>
+                                <div class="absolute top-2 left-10 w-2 h-2 bg-green-400 rounded-full"></div>
+                                <div class="mt-8 px-4">
+                                    <div class="h-1 bg-gray-200 rounded mb-2"></div>
+                                    <div class="h-1 bg-gray-200 rounded mb-2"></div>
+                                    <div class="h-1 bg-blue-400 rounded w-3/4"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-700 h-2 rounded-b-lg"></div>
+                        <div class="bg-gray-600 h-4 w-20 mx-auto rounded-b-lg"></div>
+                        <!-- Cursor -->
+                        <div class="absolute top-16 right-20 transform rotate-12">
+                            <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Page navigation
+        const loginPage = document.getElementById('loginPage');
+        const signupPage = document.getElementById('signupPage');
+        const signupSuccessPage = document.getElementById('signupSuccessPage');
+        const loginSuccessPage = document.getElementById('loginSuccessPage');
+        const createAccount = document.getElementById('createAccount');
+        const alreadyHaveAccount = document.getElementById('alreadyHaveAccount');
+        const goToLogin = document.getElementById('goToLogin');
+        const backToLogin = document.getElementById('backToLogin');
+
+        function showLogin() {
+            hideAllPages();
+            loginPage.classList.add('active');
+        }
+
+        function showSignup() {
+            hideAllPages();
+            signupPage.classList.add('active');
+        }
+
+        function showSignupSuccess() {
+            hideAllPages();
+            signupSuccessPage.classList.add('active');
+        }
+
+        function showLoginSuccess(email) {
+            hideAllPages();
+            loginSuccessPage.classList.add('active');
+            
+            // Update user information
+            document.getElementById('userEmail').textContent = email;
+            
+            const now = new Date();
+            document.getElementById('loginDate').textContent = now.toLocaleDateString();
+            document.getElementById('loginTime').textContent = now.toLocaleTimeString();
+        }
+
+        function hideAllPages() {
+            loginPage.classList.remove('active');
+            signupPage.classList.remove('active');
+            signupSuccessPage.classList.remove('active');
+            loginSuccessPage.classList.remove('active');
+        }
+        createAccount.addEventListener('click', showSignup);
+        alreadyHaveAccount.addEventListener('click', showLogin);
+        goToLogin.addEventListener('click', showLogin);
+        backToLogin.addEventListener('click', showLogin);
+
+        // Form handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Basic validation
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Simulate successful login
+            showLoginSuccess(email);
+            
+            // Reset form
+            this.reset();
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('signupUsername').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            
+            // Basic validation
+            if (!username || !email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Simulate successful signup
+            showSignupSuccess();
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Initialize login tab as active
+        showLogin();
+    </script>
+</body>
+</html>
