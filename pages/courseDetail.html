@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillStack - Master Web Development</title>
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Learn full-stack development from beginner to job-ready with real-world projects. Anytime. Anywhere."
+    />
+    <meta
+      name="keywords"
+      content="e-learning, web development, full stack, online courses, SkillStack, coding, programming"
+    />
+    <meta name="author" content="SkillStack Team" />
+
+    <!-- Open Graph (for social sharing) -->
+    <meta property="og:title" content="SkillStack - Learn technology" />
+    <meta
+      property="og:description"
+      content="Full-stack web development courses to take you from beginner to pro."
+    />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="https://skillstack.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="#" />
+    <meta name="twitter:title" content="SkillStack - Web Development Courses" />
+    <meta
+      name="twitter:description"
+      content="Join our platform to master full-stack development skills."
+    />
+    <meta name="twitter:image" content="#" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="#" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              secondary: "#434343",
+              accent: "#06b6d4",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --primary-color: #40a0d9;
+        --secondary-color: #434343;
+        --accent-color: #00b67a;
+        --background-color: #e9e9e9;
+        --text-color: #434343;
+        --white-color: #ffffff;
+        /* --border-color: #dee2e6; */
+        /* ==== font==== */
+        --font-family: "Ubuntu";
+        --font-size: 16px;
+        /* ====button=== */
+        --button-padding: 0.6em 1.2em;
+        --button-radius: 5px;
+        --button-font-weight: 600;
+        --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      *{
+       font-family: var(--font-family);
+      }
+    </style>
+    <!-- ========================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img
+                src="../imgs/Logo.png"
+                alt="Learnode"
+                class="w-[120px] h-[120px]"
+              />
+              <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-0">
+              <a
+                href="#"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Course
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./AboutUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                About
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./contactUs.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                Contact Us
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+              <a
+                href="./myLearning.html"
+                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+              >
+                My Learning
+                <div
+                  class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+                ></div>
+              </a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center space-x-4">
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="darkModeToggle"
+                class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                aria-label="Toggle dark mode"
+              >
+                <svg
+                  id="sunIcon"
+                  class="w-5 h-5 hidden dark:block"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <svg
+                  id="moonIcon"
+                  class="w-5 h-5 block dark:hidden"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Desktop Login -->
+              <a
+                href="./login.html"
+                class="hidden md:inline-block bg-[--primary-color] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+              >
+                <i class="fas fa-sign-in-alt mr-2"></i>Login
+              </a>
+
+              <!-- Mobile Menu Toggle -->
+              <button
+                id="mobileMenuToggle"
+                class="md:hidden flex items-center justify-center w-10 h-10 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-full cursor-pointer transition-colors duration-300 dark:text-white dark:hover:bg-gray-700"
+              >
+                <i id="hamburgerIcon" class="fas fa-bars"></i>
+                <i id="closeIcon" class="fas fa-times hidden"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700"
+        >
+          <!-- Mobile Login -->
+          <div class="flex justify-start px-6 py-3">
+            <a
+              href="./login.html"
+              class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
+            >
+              <i class="fas fa-sign-in-alt mr-1"></i>Login
+            </a>
+          </div>
+
+          <div class="px-6 pb-4 space-y-3">
+            <a
+              href="./course.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fa-solid fa-pager text-blue-500 mr-2"></i> Course
+            </a>
+            <a
+              href="./AboutUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-info-circle text-blue-500 mr-2"></i> About
+            </a>
+            <a
+              href="./contactUs.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-phone text-blue-500 mr-2"></i> Contact Us
+            </a>
+            <a
+              href="./myLearning.html"
+              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+            >
+              <i class="fas fa-book text-blue-500 mr-2"></i>My Learning
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="bg-[--primary-color] text-white text-center py-3 mt-16 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+      >
+        <p class="text-sm font-medium">Explore our new website today!</p>
+      </div>
+    </header>
+      <main class="max-w-screen-xl mx-auto px-4 py-8  dark:bg-black dark:text-white transition-colors duration-300">
+      <section class="mb-8 text-center ">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4 dark:text-[--primary-color]">Build Responsive Real-World Websites with HTML and CSS</h2>
+      <p class="text-gray-600 mb-6 dark:text-white">Learn modern HTML5, CSS3 and web design by building a stunning website for your portfolio! Includes flexbox and CSS Grid.</p>
+      <button class="bg-[--primary-color] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#00A0FF] transform hover:scale-105 transition-all duration-200">
+        <a href="#">Start Learning Now</a>
+      </button>
+    </section>
+
+    <!-- Main Content -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <!-- Left Content -->
+      <div class="md:col-span-2 space-y-8">
+        <!-- What You'll Learn -->
+        <section>
+          <h3 class="text-lg font-semibold mb-2">What you'll learn</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-white">
+            <li>Become a modern and confident HTML and CSS developer, no prior knowledge needed!</li>
+            <li>Design and build a stunning real-world project for your portfolio from scratch</li>
+            <li>Modern, semantic and accessible HTML5</li>
+            <li>Modern CSS (previous CSS3), including flexbox and CSS Grid for layout</li>
+            <li>Important CSS concepts such as the box model, positioning schemes, inheritance, and conflicts</li>
+            <li>A web design framework with easy-to-use rules and guidelines to design eye-catching websites</li>
+            <li>How to plan, sketch, design, build, test, and optimize a professional website</li>
+            <li>How to make websites work on every mobile device (responsive design)</li>
+            <li>How to use common components and layout patterns for professional web development</li>
+            <li>Developer skills such as reading documentation, debugging, and using professional tools</li>
+            <li>How to find and use free design assets such as images, fonts, and icons</li>
+            <li>Practice your skills with 10+ challenges (solutions included)</li>
+          </ul>
+        </section>
+
+        <!-- Course Content -->
+        <section>
+          <h3 class="text-lg font-semibold mb-2">Course Content</h3>
+          <ul class="space-y-2 text-gray-800">
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>HTML Fundamentals</strong></span>
+    <span class="text-sm text-gray-600">24 lectures · 5h 25min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>CSS Fundamentals</strong></span>
+    <span class="text-sm text-gray-600">24 lectures · 5h 25min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>Layouts: Floats, Flexbox, and CSS Grid</strong></span>
+    <span class="text-sm text-gray-600">21 lectures · 4h 2min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>Web Design Rules and Framework</strong></span>
+    <span class="text-sm text-gray-600">20 lectures · 4h 53min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>Components and Layout Patterns</strong></span>
+    <span class="text-sm text-gray-600">14 lectures · 4h 29min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>Omnifood Project - Setup & Desktop</strong></span>
+    <span class="text-sm text-gray-600">29 lectures · 10h 17min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>Omnifood Project - Responsive Design</strong></span>
+    <span class="text-sm text-gray-600">9 lectures · 2h 44min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>Omnifood Project - Effects & Deployment</strong></span>
+    <span class="text-sm text-gray-600">11 lectures · 2h 40min</span>
+  </li>
+  <li class="flex justify-between border p-3 rounded shadow-sm bg-white">
+    <span><strong>The End!</strong></span>
+    <span class="text-sm text-gray-600">2 lectures · 6min</span>
+  </li>
+</ul>
+
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-4">
+  <!-- Media Placeholder with Play Icon -->  
+  <div class="flex justify-center mb-4">
+    <div class="relative w-full">
+      <img src="https://www.ultimatewb.com/blog/wp-content/uploads/html-js-css-website-coding-1536x852.jpg" alt="Course Thumbnail" class="w-full h-48 object-cover rounded-lg shadow-md" />
+      <!-- Play Icon Overlay -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="bg-white bg-opacity-80 p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Icons -->
+  <div class="flex justify-center space-x-4 mb-4">
+    <div class="bg-orange-500 text-white px-3 py-1 rounded font-semibold uppercase text-xs">HTML</div>
+    <div class="bg-yellow-500 text-white px-3 py-1 rounded font-semibold uppercase text-xs">JS</div>
+    <div class="bg-blue-500 text-white px-3 py-1 rounded font-semibold uppercase text-xs">CSS</div>
+  </div>
+
+  <!-- Pricing -->
+  <div class="flex items-center justify-center mb-2 space-x-2 text-lg font-semibold">
+    <span class="text-gray-800">$79.99</span>
+    <span class="text-gray-400 line-through text-sm">$99.99</span>
+    <span class="text-green-600 text-sm">25% off</span>
+  </div>
+
+  <!-- Time Left -->
+  <p class="text-center text-sm text-red-500 mb-4">
+    <span class="font-semibold">3 hours</span> left at this price!
+  </p>
+
+  <!-- Action Buttons -->
+  <div class="space-y-2 mb-4">
+    <button class="w-full bg-[--primary-color] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#00A0FF] transform hover:scale-105 transition-all duration-200">
+      Add to cart
+    </button>
+    <button class="w-full border border-blue-600 text-blue-600 font-semibold py-2 px-4 rounded hover:bg-blue-50 transition duration-300">
+      Buy now
+    </button>
+  </div>
+</div>
+
+
+        <!-- Requirements -->
+        <div class="my-[60px]">
+          <h4 class="font-bold mb-2 space-y-2 dark:text-white">Requirement</h4>
+          <ul class="space-y-2 text-gray-700 text-sm list-disc list-inside font-bold dark:text-white">
+            <li>No coding or design experience necessary</li>
+            <li>Any computer works Windows, macOS or Linux</li>
+            <li>You don't need to buy any software, we will use the best free code editor in the world</li>
+          </ul>
+        </div>   
+      </aside>
+    </div>
+    <!-- Related Topics -->
+    <section class="mb-12 ">
+      <h4 class="text-lg font-semibold mb-4">Related Topics</h4>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Course Card 1 -->
+        <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4  dark:bg-gray-700 dark:text-white transition-colors duration-300">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://img-c.udemycdn.com/course/750x422/743174_8046_8.jpg"
+                     alt="databases" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-white">Introduce to Database</h2>
+                <p class="text-sm text-gray-600 dark:text-white">
+                 Learn the basics of databases.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                   <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span class="dark:text-white">4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                        <img src="https://pbs.twimg.com/media/D425Vt6XkAIzS7m?format=jpg&name=4096x4096" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium dark:text-white">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold dark:text-white">$49</span>
+                </div>
+              </div>
+            </div>
+        
+        <!-- Course Card 2 -->
+        <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4  dark:bg-gray-700 dark:text-white transition-colors duration-300">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://img-c.udemycdn.com/course/750x422/4471614_361e_8.jpg"
+                     alt="react" class="w-full h-full object-cover" />
+              </div>
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-white">Intro to React JS</h2>
+                  <p class="text-sm text-gray-600 dark:text-white">
+                  Start React JS on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                   <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                   <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                       <img src="https://pbs.twimg.com/media/D425Vt6XkAIzS7m?format=jpg&name=4096x4096" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium dark:text-white">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold dark:text-white">$49</span>
+                </div>
+              </div>
+            </div>
+        <!-- Course Card 3 -->
+        <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4  dark:bg-gray-700 dark:text-white transition-colors duration-300">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://img-c.udemycdn.com/course/750x422/1672410_9ff1_5.jpg"
+                     alt="node" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-white">Intro to Node JS</h2>
+                  <p class="text-sm text-gray-600 dark:text-white">
+                  Start Node JS on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                   <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                   <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                       <img src="https://pbs.twimg.com/media/D425Vt6XkAIzS7m?format=jpg&name=4096x4096" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium dark:text-white">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold dark:text-white">$49</span>
+                </div>
+              </div>
+            </div>
+        
+        <!-- Course Card 4 -->
+        <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4  dark:bg-gray-700 dark:text-white transition-colors duration-300">
+              <!-- Image -->
+              <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
+                <img src="https://softnshare.com/wp-content/uploads/2018/08/JavaScript-Crash-Course.png"
+                     alt="JS" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Text Content -->
+              <div class="flex-1 px-1 space-y-3">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-white">Intro to JavaScript</h2>
+                  <p class="text-sm text-gray-600 dark:text-white">
+                  Start JavaScript on code projects.
+                </p>
+
+                <!-- Time & Rating -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                   <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 hours</span>
+                  </div>
+                   <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
+                      00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
+                      2.46a1 1 0 00-.364 1.118l1.286 
+                      3.966c.3.922-.755 1.688-1.538 
+                      1.118l-3.388-2.46a1 1 0 
+                      00-1.175 0l-3.388 
+                      2.46c-.783.57-1.838-.196-1.538-1.118l1.286-3.966a1 
+                      1 0 00-.364-1.118L2.174 
+                      9.394c-.783-.57-.38-1.81.588-1.81h4.18a1 
+                      1 0 00.95-.69l1.286-3.967z"/>
+                    </svg>
+                    <span>4.8 (120 reviews)</span>
+                  </div>
+                </div>
+
+                <!-- Instructor & Price -->
+                <div class="flex items-center justify-between pt-2">
+                  <div class="flex items-center space-x-2">
+                    <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                      P
+                    </div> -->
+                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                       <img src="https://pbs.twimg.com/media/D425Vt6XkAIzS7m?format=jpg&name=4096x4096" alt="Avatar" class="w-full h-full object-cover" />
+                    </div>
+
+                    <span class="text-sm text-gray-800 font-medium dark:text-white">John Doe</span>
+                  </div>
+                  <span class="text-sm text-blue-600 font-semibold dark:text-white">$49</span>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+  </main>
+      <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Organized by Section -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Organized by
+            </h3>
+            <div class="flex items-center space-x-3">
+              <img
+                src="../imgs/ISTAD.png"
+                alt="Logo"
+                class="w-[100ox] h-[100px]"
+              />
+              <div class="text-sm">
+                <div class="font-medium">
+                  Institute of Science and Technology
+                </div>
+                <div class="text-gray-400">Advanced Development</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Course</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Course Categories Section -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-300 mb-4">
+              Course Categories
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- SkillStack Section -->
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <img
+                src="../imgs/Logo 2.png"
+                alt="Logo"
+                class="w-[130px] h-[130px]"
+              />
+              <h3 class="text-lg font-semibold">SKILLSTACK</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+              Empowering learners worldwide with quality education and skills
+              for the future.
+            </p>
+            <div class="flex space-x-3">
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition"
+                aria-label="Telegram"
+              >
+                <i class="fa-brands fa-telegram text-sm"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-gradient-to-tr from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+
+              <!-- Gmail -->
+              <a
+                href="#"
+                class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition"
+                aria-label="Email"
+              >
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/script/main.js"></script>
+  </body>
+</html>
