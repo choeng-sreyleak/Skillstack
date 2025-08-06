@@ -14,8 +14,16 @@
             font-family: 'Ubuntu', sans-serif;
         }
     </style>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
   <!-- Navigation -->
     <header>
       <!-- Navbar -->
@@ -176,7 +184,7 @@
 
 
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center py-16">
+    <div class=" bg-[#40a0d9]  dark:bg-gray-700 text-white text-center py-16 mt-9">
         <h1 class="text-4xl font-bold mb-4">Explore Our Courses</h1>
         <p class="text-lg text-blue-100 max-w-2xl mx-auto">
             Browse through our extensive collection of courses designed to help you master new skills and advance your career.
@@ -187,15 +195,15 @@
     <main class="max-w-7xl mx-auto px-4 py-8">
         <!-- Search and Filter -->
         <div class="flex flex-col md:flex-row gap-4 mb-8">
-            <div class="flex-1 relative">
+            <div class="flex-1 relative ">
                 <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                 <input 
                     type="text" 
                     placeholder="Search courses..." 
-                    class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none dark:bg-gray-700 dark:text-gray-100 transition-colors duration-300"
                 />
             </div>
-            <button class="flex items-center space-x-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+            <button class="flex items-center space-x-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-300">
                 <span>Filter</span>
                 <i class="fas fa-filter"></i>
             </button>
@@ -204,7 +212,7 @@
         <!-- Course Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> 
             <!-- Course Card 1 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors duration-300 transition  hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -213,21 +221,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -254,15 +262,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
+
 
             <!-- Course Card 2 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors duration-300 transition  hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -271,21 +280,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -312,15 +321,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
+
 
             <!-- Course Card 3 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors duration-300 transition  hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -329,21 +339,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -370,15 +380,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
+
 
             <!-- Course Card 4 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors  transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -387,21 +398,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -428,17 +439,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
 
 
-                <!-- Repeat the same courses for additional rows -->
-                <!-- Course Card 1 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+            <!-- Course Card 5-->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -447,21 +457,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -488,14 +498,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 2 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 6 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -504,21 +516,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -545,14 +557,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 3 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 7 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -561,21 +575,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -602,14 +616,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 4 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 8 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -618,21 +634,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -659,16 +675,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
 
-                 <!-- Repeat the same courses for additional rows -->
-                <!-- Course Card 1 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+            <!-- Course Card 9 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -677,21 +693,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -718,14 +734,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 2 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 10 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -734,21 +752,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -775,14 +793,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 3 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 11-->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -791,21 +811,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -832,14 +852,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 4 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 12 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -848,21 +870,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -889,16 +911,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
 
-                 <!-- Repeat the same courses for additional rows -->
-                <!-- Course Card 1 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+            <!-- Course Card 13 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -907,21 +929,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -948,14 +970,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 2 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 14 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -964,21 +988,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -1005,14 +1029,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 3 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 15 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -1021,21 +1047,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -1062,14 +1088,16 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
-            <!-- Course Card 4 -->
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4">
+
+
+            <!-- Course Card 16 -->
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -1078,21 +1106,21 @@
 
               <!-- Text Content -->
               <div class="flex-1 px-1 space-y-3">
-                <h2 class="text-lg font-bold text-gray-900">Intro to Git & GitHub</h2>
-                <p class="text-sm text-gray-600">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">Intro to Git & GitHub</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-100">
                   Start version control and collaborate on code projects.
                 </p>
 
                 <!-- Time & Rating -->
                 <div class="flex items-center space-x-4 text-xs text-gray-500">
-                  <div class="flex items-center space-x-1">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <div class="flex items-center space-x-1 dark:text-white">
+                    <svg class="w-4 h-4 text-gray-400 dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     <span>10 hours</span>
                   </div>
-                  <div class="flex items-center space-x-1">
+                  <div class="flex items-center space-x-1 dark:text-white">
                     <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 
                       00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.388 
@@ -1119,12 +1147,25 @@
                         <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
 
-                    <span class="text-sm text-gray-800 font-medium">John Doe</span>
+                    <span class="text-sm text-gray-800 font-medium dark:text-gray-100">John Doe</span>
                   </div>
-                  <span class="text-sm text-blue-600 font-semibold">$49</span>
+                  <span class="text-sm text-[#40a0d9] font-semibold">$49</span>
                 </div>
               </div>
             </div>
+
+
+
+
+            
+
+          
+
+            
+          
+            
+
+            
         </div>
 
         <!-- Pagination -->
@@ -1339,4 +1380,5 @@
     </footer>
     
 </body>
+<script src="/e-learning-web-application/script/Coursepage.js"></script>
 </html>
