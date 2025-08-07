@@ -50,27 +50,8 @@
         },
       };
     </script> -->
-    <style>
-      :root {
-        --primary-color: #40a0d9;
-        --secondary-color: #434343;
-        --accent-color: #00b67a;
-        --background-color: #e9e9e9;
-        --text-color: #434343;
-        --white-color: #ffffff;
-        /* --border-color: #dee2e6; */
-        /* ==== font==== */
-        --font-family: "Ubuntu";
-        --font-size: 16px;
-
-        /* ====button=== */
-        --button-padding: 0.6em 1.2em;
-        --button-radius: 5px;
-        --button-font-weight: 600;
-        --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      }
-    </style>
     <!-- ========================================================== -->
+    <link rel="stylesheet" href="./pages/CSS/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -101,7 +82,7 @@
                 alt="Learnode"
                 class="w-[120px] h-[120px]"
               />
-              <a href="#">
+              <a href="#" class="hide-on-mobile">
                 <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
               </a>
             </div>
@@ -250,54 +231,107 @@
     <main>
       <!-- Hero Section -->
       <section
-        class="bg-[--background-color] py-20 dark:bg-black dark:text-white transition-colors duration-300"
+        class="bg-[--background-color] py-20 dark:bg-black dark:text-white transition-colors duration-300 min-h-screen flex items-center"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
-              <h1
-                class="text-5xl font-bold text-[--secondary-color] dark:text-white leading-tight"
-              >
-                Master Web
-                <span class="text-[--primary-color]"
-                  >Development</span
-                >.<br />
-                <span class="text-[--secondary-color] dark:text-white"
-                  >Anytime.</span
+              <!-- Main Heading with typewriter effect -->
+              <h1 class="text-5xl font-bold leading-tight">
+                <div
+                  class="typewriter text-[--secondary-color] dark:text-white"
+                  id="line1"
+                  style="display: none"
                 >
-                <span class="text-[--primary-color]"> Anywhere.</span>
+                  Master Web
+                </div>
+                <div
+                  class="typewriter gradient-text"
+                  id="line2"
+                  style="display: none"
+                >
+                  Development.
+                </div>
+                <div
+                  class="typewriter text-[--secondary-color] dark:text-white"
+                  id="line3"
+                  style="display: none"
+                >
+                  Anytime.
+                </div>
+                <div
+                  class="typewriter gradient-text"
+                  id="line4"
+                  style="display: none"
+                >
+                  Anywhere.
+                </div>
               </h1>
-              <p class="text-xl text-gray-600 dark:text-white leading-relaxed">
+
+              <!-- Subtitle with delayed animation -->
+              <p
+                class="text-xl text-gray-600 dark:text-white leading-relaxed fade-in-element subtitle"
+                style="opacity: 0"
+              >
                 Learn full-stack development with real-world projects.<br />
                 From beginner to job-ready.
               </p>
-              <div class="flex space-x-4">
-                <!-- <button
-                  class="bg-[--primary-color] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#00A0FF] transform hover:scale-105 transition-all duration-200"
-                >
-                  Browse Courses
-                </button> -->
+
+              <!-- Buttons with delayed animation and hover effects -->
+              <div
+                class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 fade-in-element buttons"
+                style="opacity: 0"
+              >
                 <a
                   href="./pages/course.html"
-                  class="bg-[--primary-color] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#00A0FF] transform hover:scale-105 transition-all duration-200"
-                  >Browse Courses</a
+                  class="bg-[--primary-color] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#00A0FF] transform hover:scale-105 transition-all duration-200 animate-pulse-glow hover-lift text-center"
                 >
-                <!-- <button
-                  class="border border-gray-300 text-gray-700 dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                >
-                  Start Free Trial
-                </button> -->
+                  Browse Courses
+                </a>
                 <a
                   href="#"
-                  class="border border-gray-300 text-gray-700 dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                  >Start Free Trial</a
+                  class="border border-gray-300 text-gray-700 dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover-lift text-center"
                 >
+                  Start Free Trial
+                </a>
               </div>
             </div>
-            <div class="relative">
-              <img src="../imgs/hero_pic.png" alt="" />
+
+            <!-- Image with float animation -->
+            <div
+              class="bg-[#E9E9E9] relative fade-in-element image-container"
+              style="opacity: 0"
+            >
+              <div class="animate-float">
+                <img
+                  src="../imgs/hero_pic.png"
+                  alt="Web Development Learning"
+                  class="w-full h-auto rounded-lg duration-300"
+                />
+              </div>
+
+              <!-- Decorative elements -->
+              <div
+                class="absolute -top-4 -left-4 w-20 h-20 bg-[--primary-color] opacity-20 rounded-full animate-pulse"
+              ></div>
+              <div
+                class="absolute -bottom-4 -right-4 w-16 h-16 bg-[--primary-color] opacity-30 rounded-full animate-pulse delay-1000"
+              ></div>
             </div>
           </div>
+        </div>
+
+        <!-- Floating particles background effect -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            class="particle absolute top-1/4 left-1/4 w-2 h-2 bg-[--primary-color] opacity-20 rounded-full"
+          ></div>
+          <div
+            class="particle absolute top-3/4 left-3/4 w-1 h-1 bg-[--primary-color] opacity-30 rounded-full"
+          ></div>
+          <div
+            class="particle absolute top-1/2 left-1/6 w-1.5 h-1.5 bg-[--primary-color] opacity-25 rounded-full"
+          ></div>
         </div>
       </section>
 
@@ -945,18 +979,22 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div
+        class="container mx-auto px-4 sm:px-6 flex justify-center items-center text-center"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-center md:items-start"
+        >
           <!-- Organized by Section -->
           <div class="space-y-4">
             <h3 class="text-lg font-semibold text-gray-300 mb-4">
               Organized by
             </h3>
-            <div class="items-center">
+            <div>
               <img
                 src="../imgs/ISTAD.png"
                 alt="Logo"
-                class="w-[100ox] h-[100px]"
+                class="w-[100px] mx-auto md:mx-0"
               />
               <div class="text-sm mt-8">
                 <div class="font-medium">
@@ -1057,11 +1095,11 @@
 
           <!-- SkillStack Section -->
           <div class="top-0">
-            <div class="flex items-center space-x-2 mb-4">
+            <div class="flex items-center space-x-2 mb-4 ml-20">
               <img
                 src="./imgs/SkillstactLogo.png"
                 alt="Logo"
-                class="w-[100px]"
+                class="w-[100px] mx-0"
               />
               <h3 class="text-lg font-semibold">SKILLSTACK</h3>
             </div>
@@ -1069,7 +1107,7 @@
               Empowering learners worldwide with quality education and skills
               for the future.
             </p>
-            <div class="flex space-x-3">
+            <div class="flex space-x-3 md:justify-start justify-center">
               <!-- Facebook -->
               <a
                 href="https://web.facebook.com/?_rdc=1&_rdr"

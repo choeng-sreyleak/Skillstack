@@ -36,6 +36,11 @@
         --button-font-weight: 600;
         --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
+      @media (max-width: 768px) {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -55,7 +60,7 @@
                 alt="Learnode"
                 class="w-[120px] h-[120px]"
               />
-              <a href="../index.html"
+              <a href="../index.html" class="hide-on-mobile"
                 ><h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1></a
               >
             </div>
@@ -332,19 +337,24 @@
       </div>
     </main>
     <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div
+        class="container mx-auto px-4 sm:px-6 flex justify-center items-center text-center"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-center md:items-start"
+        >
           <!-- Organized by Section -->
           <div class="space-y-4">
             <h3 class="text-lg font-semibold text-gray-300 mb-4">
               Organized by
             </h3>
-            <div class="items-center">
+            <div>
               <img
                 src="../imgs/ISTAD.png"
                 alt="Logo"
-                class="w-[100ox] h-[100px]"
+                class="w-[100px] mx-auto md:mx-0"
               />
               <div class="text-sm mt-8">
                 <div class="font-medium">
@@ -445,11 +455,11 @@
 
           <!-- SkillStack Section -->
           <div class="top-0">
-            <div class="flex items-center space-x-2 mb-4">
+            <div class="flex items-center space-x-2 mb-4 ml-20">
               <img
-                src="../imgs/SkillstactLogo.png"
+                src="./imgs/SkillstactLogo.png"
                 alt="Logo"
-                class="w-[100px]"
+                class="w-[100px] mx-0"
               />
               <h3 class="text-lg font-semibold">SKILLSTACK</h3>
             </div>
@@ -457,7 +467,7 @@
               Empowering learners worldwide with quality education and skills
               for the future.
             </p>
-            <div class="flex space-x-3">
+            <div class="flex space-x-3 md:justify-start justify-center">
               <!-- Facebook -->
               <a
                 href="https://web.facebook.com/?_rdc=1&_rdr"
