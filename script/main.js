@@ -197,3 +197,79 @@ function handleFormSubmission(event) {
 document.querySelectorAll("form").forEach((form) => {
   form.addEventListener("submit", handleFormSubmission);
 });
+// ========================= animetion hero section========================================
+// Initialize animations when page loads
+document.addEventListener("DOMContentLoaded", function () {
+  // Typewriter effect for heading
+  const lines = ["line1", "line2", "line3", "line4"];
+  let currentLine = 0;
+
+  function showNextLine() {
+    if (currentLine < lines.length) {
+      const element = document.getElementById(lines[currentLine]);
+      element.style.display = "block";
+
+      // Remove cursor from previous line
+      if (currentLine > 0) {
+        const prevElement = document.getElementById(lines[currentLine - 1]);
+        prevElement.classList.add("no-cursor");
+      }
+
+      currentLine++;
+
+      // Schedule next line
+      if (currentLine < lines.length) {
+        setTimeout(showNextLine, 1800); // Wait for typewriter + small delay
+      } else {
+        // Remove cursor from last line
+        element.classList.add("no-cursor");
+        // Start other animations after typewriter is complete
+        startOtherAnimations();
+      }
+    }
+  }
+
+  function startOtherAnimations() {
+    // Animate subtitle and buttons
+    const subtitle = document.querySelector(".subtitle");
+    const buttons = document.querySelector(".buttons");
+
+    setTimeout(() => {
+      subtitle.classList.add("animate-fade-in-up");
+    }, 200);
+
+    setTimeout(() => {
+      buttons.classList.add("animate-fade-in-up");
+    }, 400);
+  }
+
+  // Start typewriter effect
+  setTimeout(showNextLine, 500);
+
+  // Animate image
+  const imageContainer = document.querySelector(".image-container");
+  setTimeout(() => {
+    imageContainer.classList.add("animate-fade-in-right");
+  }, 1000);
+
+  // Add floating particles animation
+  const particles = document.querySelectorAll(".particle");
+  particles.forEach((particle, index) => {
+    particle.style.animation = `float ${3 + index}s ease-in-out infinite`;
+    particle.style.animationDelay = `${index * 0.5}s`;
+  });
+});
+
+// Add mouse movement parallax effect
+document.addEventListener("mousemove", function (e) {
+  const mouseX = e.clientX / window.innerWidth;
+  const mouseY = e.clientY / window.innerHeight;
+
+  const particles = document.querySelectorAll(".particle");
+  particles.forEach((particle, index) => {
+    const speed = (index + 1) * 0.5;
+    particle.style.transform = `translate(${mouseX * speed}px, ${
+      mouseY * speed
+    }px)`;
+  });
+});

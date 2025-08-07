@@ -28,7 +28,11 @@
         --button-font-weight: 600;
         --button-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
-
+      @media (max-width: 768px) {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
       body {
         font-family: var(--font-family), sans-serif;
         font-size: var(--font-size);
@@ -68,11 +72,11 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(
+        /* background: linear-gradient(
           135deg,
           rgba(102, 126, 234, 0.8),
           rgba(118, 75, 162, 0.8)
-        );
+        ); */
         opacity: 0;
         transition: opacity 0.3s ease;
         z-index: 1;
@@ -216,7 +220,7 @@
                 alt="Learnode"
                 class="w-[120px] h-[120px]"
               />
-              <a href="../index.html">
+              <a href="../index.html" class="hide-on-mobile">
                 <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
               </a>
             </div>
@@ -357,7 +361,9 @@
       </nav>
     </header>
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 mt-16 dark:bg-black dark:text-white transition-colors duration-300">
+    <main
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 mt-16 dark:bg-black dark:text-white transition-colors duration-300"
+    >
       <!-- About Us Hero Section -->
       <section class="text-center mb-12 sm:mb-16">
         <h1
@@ -391,13 +397,17 @@
 
       <!-- Mission Statement -->
       <section class="mb-12 sm:mb-16">
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-800 dark:text-white transition-colors duration-300">
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-800 dark:text-white transition-colors duration-300"
+        >
           <div class="flex flex-col md:flex-row">
             <div class="w-full md:w-1/2 p-6 sm:p-8">
               <h2 class="text-xl sm:text-2xl font-bold secondary-color mb-4">
                 Mission Statement
               </h2>
-              <p class="text-gray-600 mb-4 text-sm sm:text-base dark:text-white">
+              <p
+                class="text-gray-600 mb-4 text-sm sm:text-base dark:text-white"
+              >
                 At SkillStack, our mission is to transform the way people learn.
                 We combine innovative technology with expert instruction to
                 deliver education that is engaging, effective, and accessible.
@@ -410,7 +420,7 @@
             </div>
             <div class="w-full md:w-1/2 h-64 md:h-auto">
               <img
-                src="../imgs/picture1.avif"
+                src="../imgs/picture2.avif"
                 alt="Learning Journey"
                 class="w-full h-full object-cover"
               />
@@ -421,7 +431,9 @@
 
       <!-- Second Section -->
       <section class="mb-12 sm:mb-16">
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-800 dark:text-white transition-colors duration-300">
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-800 dark:text-white transition-colors duration-300"
+        >
           <div class="flex flex-col md:flex-row">
             <div class="w-full md:w-1/2 h-64 md:h-auto order-2 md:order-1">
               <img
@@ -449,7 +461,9 @@
 
       <!-- Future-Proof Your Skills Section -->
       <section class="mb-12 sm:mb-16">
-        <div class="bg-[--primary-color] rounded-lg text-white p-6 sm:p-8 text-center dark:bg-gray-800 dark:text-white transition-colors duration-300">
+        <div
+          class="bg-[--primary-color] rounded-lg text-white p-6 sm:p-8 text-center dark:bg-gray-800 dark:text-white transition-colors duration-300"
+        >
           <div class="flex justify-center items-center mb-4">
             <h2 class="text-2xl sm:text-3xl font-bold">
               Future-Proof Your Skills
@@ -555,7 +569,7 @@
                 class="profile-image w-40 h-40 lg:w-48 lg:h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl"
               >
                 <img
-                  src="../imgs/mentor1.png"
+                  src="../imgs/mentor1.jpg"
                   alt="Mr. Ing Davann"
                   class="w-full h-full object-cover"
                 />
@@ -596,10 +610,10 @@
           >
             <div class="text-center">
               <div
-                class="profile-image w-40 h-40 lg:w-48 lg:h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl "
+                class="profile-image w-40 h-40 lg:w-48 lg:h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl"
               >
                 <img
-                  src="../imgs/mentor2.png"
+                  src="../imgs/mentor2.jpg"
                   alt="Mr. Chan Chhaya"
                   class="w-full h-full object-cover"
                 />
@@ -654,7 +668,7 @@
 
         <!-- Team Grid -->
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10 "
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10"
         >
           <!-- Team Member 1 - Leader -->
           <div
@@ -678,7 +692,9 @@
               <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">
                 CHOENG SREY LEAK
               </h3>
-              <p class="text-sm text-gray-500 mb-4 dark:text-white">Group Leader</p>
+              <p class="text-sm text-gray-500 mb-4 dark:text-white">
+                Group Leader
+              </p>
               <div class="flex justify-center space-x-3">
                 <a
                   href="#"
@@ -727,8 +743,12 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">KOY SOKKEA</h3>
-              <p class="text-sm text-gray-500 mb-4 dark:text-white">Sub Leader</p>
+              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">
+                KOY SOKKEA
+              </h3>
+              <p class="text-sm text-gray-500 mb-4 dark:text-white">
+                Sub Leader
+              </p>
               <div class="flex justify-center space-x-3">
                 <a
                   href="#"
@@ -772,8 +792,12 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">TRY SOPHANY</h3>
-              <p class="text-sm text-gray-500 mb-4 dark:text-white">Team Member</p>
+              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">
+                TRY SOPHANY
+              </h3>
+              <p class="text-sm text-gray-500 mb-4 dark:text-white">
+                Team Member
+              </p>
               <div class="flex justify-center space-x-3">
                 <a
                   href="#"
@@ -817,8 +841,12 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">SAN SOPHEAK</h3>
-              <p class="text-sm text-gray-500 mb-4 dark:text-white">Team Member</p>
+              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">
+                SAN SOPHEAK
+              </h3>
+              <p class="text-sm text-gray-500 mb-4 dark:text-white">
+                Team Member
+              </p>
               <div class="flex justify-center space-x-3">
                 <a
                   href="#"
@@ -862,8 +890,12 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">SROEUM SAREN</h3>
-              <p class="text-sm text-gray-500 mb-4 dark:text-white">Team Member</p>
+              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">
+                SROEUM SAREN
+              </h3>
+              <p class="text-sm text-gray-500 mb-4 dark:text-white">
+                Team Member
+              </p>
               <div class="flex justify-center space-x-3">
                 <a
                   href="#"
@@ -910,7 +942,9 @@
               <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">
                 CHRACH SAVOEUN
               </h3>
-              <p class="text-sm text-gray-500 mb-4 dark:text-white">Team Member</p>
+              <p class="text-sm text-gray-500 mb-4 dark:text-white">
+                Team Member
+              </p>
               <div class="flex justify-center space-x-3">
                 <a
                   href="#"
@@ -954,8 +988,12 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">LUY LYHAI</h3>
-              <p class="text-sm text-gray-500 mb-4 dark:text-white">Team Member</p>
+              <h3 class="text-lg font-bold text-gray-800 mb-1 dark:text-white">
+                LUY LYHAI
+              </h3>
+              <p class="text-sm text-gray-500 mb-4 dark:text-white">
+                Team Member
+              </p>
               <div class="flex justify-center space-x-3">
                 <a
                   href="#"
@@ -987,26 +1025,58 @@
         </div>
       </section>
     </main>
-    <!-- Footer -->
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 bg-[--primary-color] dark:bg-gray-700 dark:text-white transition-colors duration-300"
+    >
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-white mb-4">
+          Ready to Start Learning!
+        </h2>
+        <p class="text-xl text-blue-100 mb-8">
+          Join thousands of students already learning with SkillStack and
+          advance your career today.
+        </p>
+        <div class="flex justify-center space-x-4">
+          <button
+            class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-200"
+          >
+            Get Started
+          </button>
+          <button
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div
+        class="container mx-auto px-4 sm:px-6 flex justify-center items-center text-center"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-center md:items-start"
+        >
           <!-- Organized by Section -->
           <div class="space-y-4">
             <h3 class="text-lg font-semibold text-gray-300 mb-4">
               Organized by
             </h3>
-            <div class="flex items-center space-x-3">
+            <div>
               <img
-                src="../imgs/ISTAD.png"
+                src="../imgs/New Logo iSTAD-06.png"
                 alt="Logo"
-                class="w-[100ox] h-[100px]"
+                class="w-[200px] mx-auto md:mx-0"
               />
-              <div class="text-sm">
+              <div class="text-sm mt-8">
                 <div class="font-medium">
                   Institute of Science and Technology
                 </div>
-                <div class="text-gray-400">Advanced Development</div>
+                <div>Advanced Development</div>
               </div>
             </div>
           </div>
@@ -1026,21 +1096,21 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./pages/course.html"
                   class="text-gray-400 hover:text-white transition-colors"
                   >Course</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./pages/AboutUs.html"
                   class="text-gray-400 hover:text-white transition-colors"
                   >About</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./pages/contactUs.html"
                   class="text-gray-400 hover:text-white transition-colors"
                   >Contact Us</a
                 >
@@ -1100,23 +1170,23 @@
           </div>
 
           <!-- SkillStack Section -->
-          <div>
-            <div class="flex items-center space-x-2 mb-4">
+          <div class="top-0">
+            <div class="flex items-center space-x-2 mb-4 ml-20">
               <img
-                src="../imgs/Logo 2.png"
+                src="../imgs/SkillstactLogo.png"
                 alt="Logo"
-                class="w-[130px] h-[130px]"
+                class="w-[100px] mx-0"
               />
-              <h3 class="text-lg font-semibold">SKILLSTACK</h3>
+              <h3 class="text-[28px] font-semibold text-[--background-color]">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h3>
             </div>
             <p class="text-gray-400 text-sm mb-4 leading-relaxed">
               Empowering learners worldwide with quality education and skills
               for the future.
             </p>
-            <div class="flex space-x-3">
+            <div class="flex space-x-3 md:justify-start justify-center">
               <!-- Facebook -->
               <a
-                href="#"
+                href="https://web.facebook.com/?_rdc=1&_rdr"
                 class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition"
                 aria-label="Facebook"
               >
@@ -1125,7 +1195,7 @@
 
               <!-- Telegram -->
               <a
-                href="#"
+                href="https://web.telegram.org/a/"
                 class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition"
                 aria-label="Telegram"
               >
@@ -1134,7 +1204,7 @@
 
               <!-- Instagram -->
               <a
-                href="#"
+                href="https://www.instagram.com/accounts/login/"
                 class="w-8 h-8 bg-gradient-to-tr from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition"
                 aria-label="Instagram"
               >
@@ -1143,7 +1213,7 @@
 
               <!-- Gmail -->
               <a
-                href="#"
+                href="example@email.com"
                 class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition"
                 aria-label="Email"
               >
