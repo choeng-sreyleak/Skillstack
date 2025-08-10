@@ -228,10 +228,10 @@
       </div>
 
         <!-- Course Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> 
+        <div id="Container_card" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> 
           <!-- Course Card 1 -->
            <a href="./courseDetail.html"> 
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors duration-300 transition  hover:shadow-lg hover:scale-105 ">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition-duration-300   hover:shadow-lg hover:scale-105 ">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="../imgs/Html.jpg"
@@ -314,7 +314,7 @@
 
             <!-- Course Card 2 -->
              <a href="./courseDetail.html"> 
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors duration-300 transition  hover:shadow-lg hover:scale-105">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition-duration-300  hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="../imgs/UXUI.jpg"
@@ -397,7 +397,7 @@
 
             <!-- Course Card 3 -->
              <a href="./courseDetail.html"> 
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors duration-300 transition  hover:shadow-lg hover:scale-105">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors transition-duration-300  hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="../imgs/DevOps.jpg"
@@ -480,7 +480,7 @@
 
             <!-- Course Card 4 -->
              <a href="./courseDetail.html"> 
-            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors  transition duration-300 hover:shadow-lg hover:scale-105">
+            <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700  dark:text-white transition-colors  transition-duration-300 hover:shadow-lg hover:scale-105">
               <!-- Image -->
               <div class="w-full h-[177px] rounded-[12px] overflow-hidden">
                 <img src="../imgs/Data.jpeg"
@@ -540,9 +540,6 @@
             <!-- Instructor & Price -->
             <div class="flex items-center justify-between pt-2">
               <div class="flex items-center space-x-2">
-                <!-- <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-bold text-white">
-                      P
-                    </div> -->
                 <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
                   <img
                     src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
@@ -1559,47 +1556,21 @@
       </div>
 
       <!-- Pagination -->
-      <div class="flex justify-center items-center space-x-2 mt-12">
-        <!-- Left Arrow Button -->
-        <button
-          class="w-8 h-8 rounded-full bg-gray-600 text-white flex items-center justify-center"
-          aria-label="Previous Page"
-        >
-          <i class="fas fa-chevron-left text-sm" aria-hidden="true"></i>
-        </button>
+    
 
-        <!-- Pagination Dots -->
-        <div class="flex space-x-2" role="group" aria-label="Page indicators">
-          <button
-            class="w-2 h-2 rounded-full bg-gray-400"
-            aria-label="Go to page 1"
-          ></button>
-          <button
-            class="w-2 h-2 rounded-full bg-gray-400"
-            aria-label="Go to page 2"
-          ></button>
-          <button
-            class="w-2 h-2 rounded-full bg-gray-600"
-            aria-label="Current page, page 3"
-            aria-current="page"
-          ></button>
-          <button
-            class="w-2 h-2 rounded-full bg-gray-400"
-            aria-label="Go to page 4"
-          ></button>
-        </div>
-
-        <!-- Right Arrow Button -->
-        <button
-          class="w-8 h-8 rounded-full bg-gray-600 text-white flex items-center justify-center"
-          aria-label="Next Page"
-        >
-          <i class="fas fa-chevron-right text-sm" aria-hidden="true"></i>
-        </button>
       </div>
-
-      <!-- </div> -->
     </main>
+  
+    <div class="flex justify-center items-center space-x-4 pb-10">
+      <button onclick="prevPage()" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600 text-white">&lt;</button>
+      
+      <div class="flex space-x-2">
+        <span id="page-info" class="text-gray-700 font-medium"></span>
+      </div>
+      
+      <button onclick="nextPage()" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600 text-white">&gt;</button>
+    </div>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
@@ -1772,6 +1743,7 @@
         </div>
       </div>
     </footer>
+    
   </body>
   <script src="../script/Coursepage.js"></script>
 </html>
