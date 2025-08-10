@@ -73,14 +73,14 @@
 
 
  // API APPYY CARD 
- const container = document.getElementById("Container_card");
+const container = document.getElementById("Container_card");
   const pageInfo = document.getElementById("page-info");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
 
   let allCourses = [];
   let currentPage = 1;
-  const cardsPerPage = 8; 
+  const cardsPerPage = 8;
   let totalPages = 1;
 
   async function fetchCourses() {
@@ -150,3 +150,4 @@
   }
 
   fetchCourses();
+
