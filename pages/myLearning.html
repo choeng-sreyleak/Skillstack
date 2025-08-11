@@ -35,6 +35,17 @@
           display: none;
         }
       }
+       .nav-menu a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px 15px;
+      }
+
+      .nav-menu a.active {
+        color: #007bff;
+        font-weight: bold;
+        border-bottom: 2px solid #007bff;
+      }
     </style>
     <link rel="stylesheet" href="/e-learning-web-application/src/output.css" />
   </head>
@@ -44,30 +55,30 @@
     <!-- Navigation -->
     <header>
       <!-- Navbar -->
-<!-- Navigation -->
-    <header>
-      <!-- Navbar -->
       <nav
-        class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+        class="nav-menu bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
       >
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
             <!-- Logo -->
             <div class="flex items-center">
-              <a href="../index.html"><img
+              <a href="../index.html">
+                <img
                 src="../imgs/Logo.png"
                 alt="Learnode"
                 class="w-[120px] h-[120px]"
-              /></a>
-              <a href="#" class="hide-on-mobile">
-                <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
+              />
+              </a>
+
+              <a href="../index.html" class="hide-on-mobile">
+                <h1 class="text-2xl font-bold ml-2 dark:text-white">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
               </a>
             </div>
 
             <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-0">
               <a
-                href="./pages/course.html"
+                href="./course.html"
                 class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Course
@@ -76,7 +87,7 @@
                 ></div>
               </a>
               <a
-                href="../pages/AboutUs.html"
+                href="./AboutUs.html"
                 class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 About
@@ -85,7 +96,7 @@
                 ></div>
               </a>
               <a
-                href="./pages/contactUs.html"
+                href="./contactUs.html"
                 class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Contact Us
@@ -94,8 +105,8 @@
                 ></div>
               </a>
               <a
-                href="../pages/myLearning.html"
-                class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
+                href="#"
+                class="active group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 My Learning
                 <div
@@ -137,8 +148,8 @@
               </button>
               <!-- Desktop Login -->
               <a
-                href="../pages/login.html"
-                class="hidden md:inline-block bg-[--primary-color] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+                href="./login.html"
+                class="hidden md:inline-block border border-gray-400 hover:bg-white  shimmer-effect text-white dark:text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
               >
                 <i class="fas fa-sign-in-alt mr-2"></i>Login
               </a>
@@ -163,8 +174,8 @@
           <!-- Mobile Login -->
           <div class="flex justify-start px-6 py-3">
             <a
-              href="../pages/login.html"
-              class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
+              href="./login.html"
+              class="border border-gray-400 hover:bg-white  shimmer-effect text-white dark:text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
             >
               <i class="fas fa-sign-in-alt mr-1"></i>Login
             </a>
@@ -172,41 +183,35 @@
 
           <div class="px-6 pb-4 space-y-3">
             <a
-              href="./pages/course.html"
+              href="./course.html"
               class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fa-solid fa-pager text-blue-500 mr-2"></i> Course
             </a>
             <a
-              href="./pages/AboutUs.html"
+              href="./AboutUs.html"
               class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-info-circle text-blue-500 mr-2"></i> About
             </a>
             <a
-              href="./pages/contactUs.html"
+              href="./contactUs.html"
               class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-phone text-blue-500 mr-2"></i> Contact Us
             </a>
             <a
-              href="./pages/myLearning.html"
-              class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
+              href="./myLearning.html"
+              class="active flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-book text-blue-500 mr-2"></i>My Learning
             </a>
           </div>
         </div>
       </nav>
-      <div
-        class="bg-[--primary-color] text-white text-center py-3 mt-16 dark:bg-gray-700 dark:text-white transition-colors duration-300"
-      >
-        <p class="text-sm font-medium">Explore our new website today!</p>
-      </div>
     </header>
 
-    
-   <!-- body -->
+    <!-- body -->
     <div class="w-[90%] mx-auto sm:p-0 md:3">
       <!-- Welcome Section -->
       <div
@@ -225,28 +230,36 @@
         <!-- Stats Cards -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-2 md:p-9">
           <div
-            class=" border-4 border-[#32c71f]  p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105 items-center"
+            class="border-4 border-[#32c71f] p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105 items-center"
           >
             <div class="text-3xl font-bold text-[#32c71f]">12</div>
-            <div class="sm:text-base lg:text-xl text-[#32c71f]">Courses Completed</div>
+            <div class="sm:text-base lg:text-xl text-[#32c71f]">
+              Courses Completed
+            </div>
           </div>
           <div
-            class=" border-4 border-orange-400   p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="border-4 border-orange-400 p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="text-3xl font-bold text-orange-400 ">5</div>
-            <div class="sm:text-base lg:text-xl text-orange-400">Active Courses</div>
+            <div class="text-3xl font-bold text-orange-400">5</div>
+            <div class="sm:text-base lg:text-xl text-orange-400">
+              Active Courses
+            </div>
           </div>
           <div
-            class="border-4 border-red-400  text-white p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="border-4 border-red-400 text-white p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
             <div class="text-3xl font-bold text-red-400">76%</div>
-            <div class="sm:text-base lg:text-xl text-red-400">Overall Progress</div>
+            <div class="sm:text-base lg:text-xl text-red-400">
+              Overall Progress
+            </div>
           </div>
           <div
-            class=" border-4 border-blue-600  p-8 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="border-4 border-blue-600 p-8 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
             <div class="text-3xl font-bold text-blue-600">146h</div>
-            <div class="sm:text-base lg:text-xl text-blue-600">Total Study Time</div>
+            <div class="sm:text-base lg:text-xl text-blue-600">
+              Total Study Time
+            </div>
           </div>
         </div>
       </div>
@@ -265,18 +278,26 @@
         <div class="space-y-3">
           <!-- course 1 -->
           <div
-            class="flex flex-col-reverse md:flex-row items-center gap-5 bg-gray-100 rounded-lg sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300 sm:shadow-none  md:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px] lg:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px]">
-            <div class="flex-1 mx-2 ">
+            class="flex flex-col-reverse md:flex-row items-center gap-5 bg-gray-100 rounded-lg sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300 sm:shadow-none md:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px] lg:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px]"
+          >
+            <div class="flex-1 mx-2">
               <h3
                 class="font-semibold text-gray-800 text-lg mb-1 dark:text-white"
               >
                 Natural Language with Python and spacy
               </h3>
               <div class="flex items-center space-x-2 my-2">
-                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden ">
-                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
-                    </div>
-                    <span class="text-base text-[#434343] font-medium dark:text-white">John Doe</span>
+                <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                  <img
+                    src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                    alt="Avatar"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <span
+                  class="text-base text-[#434343] font-medium dark:text-white"
+                  >John Doe</span
+                >
               </div>
               <p class="text-base text-[#434343] mb-3 dark:text-white">
                 4 lessons • 35% Complete • 7 lessons remaining
@@ -317,18 +338,26 @@
 
           <!-- course 2 -->
           <div
-            class="flex flex-col-reverse md:flex-row items-center gap-5 bg-gray-100 rounded-lg sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300 sm:shadow-none  md:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px] lg:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px]">
-            <div class="flex-1 mx-2 ">
+            class="flex flex-col-reverse md:flex-row items-center gap-5 bg-gray-100 rounded-lg sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300 sm:shadow-none md:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px] lg:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px]"
+          >
+            <div class="flex-1 mx-2">
               <h3
                 class="font-semibold text-gray-800 text-lg mb-1 dark:text-white"
               >
                 Database Performance Testing and Optimization
               </h3>
               <div class="flex items-center space-x-2 my-2">
-                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden ">
-                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
-                    </div>
-                    <span class="text-base text-[#434343] font-medium dark:text-white">John Doe</span>
+                <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                  <img
+                    src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                    alt="Avatar"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <span
+                  class="text-base text-[#434343] font-medium dark:text-white"
+                  >John Doe</span
+                >
               </div>
               <p class="text-base text-[#434343] dark:text-white mb-3">
                 3 lessons • 70% Complete • 4 lessons remaining
@@ -369,19 +398,27 @@
 
           <!-- course 3  -->
           <div
-            class="flex flex-col-reverse md:flex-row items-center gap-5 bg-gray-100 rounded-lg sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300 sm:shadow-none  md:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px] lg:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px]">
-            <div class="flex-1 mx-2 ">
+            class="flex flex-col-reverse md:flex-row items-center gap-5 bg-gray-100 rounded-lg sm:mx-1 lg:mx-9 sm:p-4 lg:p-9 dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-300 sm:shadow-none md:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px] lg:shadow-[rgba(0,182,122,5)_-7px_0px_0px_0px]"
+          >
+            <div class="flex-1 mx-2">
               <h3
                 class="font-semibold text-gray-800 text-lg mb-1 dark:text-white"
               >
                 Mobile UI/UX Design and Javascript Patterns
               </h3>
               <div class="flex items-center space-x-2 my-2">
-                    <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden ">
-                        <img src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg" alt="Avatar" class="w-full h-full object-cover" />
-                    </div>
+                <div class="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                  <img
+                    src="https://i.pinimg.com/736x/a8/f9/d6/a8f9d6e845a6075646bbf184839a9d37.jpg"
+                    alt="Avatar"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
 
-                    <span class="text-base text-[#434343] font-medium dark:text-white">John Doe</span>
+                <span
+                  class="text-base text-[#434343] font-medium dark:text-white"
+                  >John Doe</span
+                >
               </div>
               <p class="text-base text-[#434343] mb-3 dark:text-white">
                 8 lessons • 50% Complete • 5 lessons remaining
@@ -555,7 +592,7 @@
             class="bg-[#40A0D9] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
             <div class="lg:text-3xl sm:text-lg mb-1">⭐</div>
-            <div class="lg:text-xl sm:text-sm font-semibold  text-white">
+            <div class="lg:text-xl sm:text-sm font-semibold text-white">
               Top Learner
             </div>
           </div>
@@ -705,7 +742,9 @@
                 alt="Logo"
                 class="w-[100px] mx-0"
               />
-              <h3 class="text-[28px] font-semibold text-[--background-color]">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h3>
+              <h3 class="text-[28px] font-semibold text-[--background-color]">
+                𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆
+              </h3>
             </div>
             <p class="text-gray-400 text-sm mb-4 leading-relaxed">
               Empowering learners worldwide with quality education and skills

@@ -71,8 +71,7 @@ window
 // Initialize theme on page load
 initializeTheme();
 
-
-// API APPYY CARD 
+// API APPYY CARD
 const container = document.getElementById("Container_card");
 const pageInfo = document.getElementById("page-info");
 const prevBtn = document.getElementById("prevBtn");
@@ -101,7 +100,9 @@ function renderCards() {
   const end = start + cardsPerPage;
   const visibleCourses = allCourses.slice(start, end);
 
-  container.innerHTML = visibleCourses.map(pro => `
+  container.innerHTML = visibleCourses
+    .map(
+      (pro) => `
       <div class="bg-white rounded-2xl shadow-lg w-full p-5">
         <div class="flex justify-center mb-4">
           <img src="${pro.thumbnail}" alt ${pro.title} class="rounded-xl w-full max-w-xs object-contain" />
@@ -127,7 +128,9 @@ function renderCards() {
         </div>
       </div>
     </div>
-    `).join("");
+    `
+    )
+    .join("");
 
   pageInfo.innerText = `Page ${currentPage} of ${totalPages}`;
   updateButtons();
@@ -151,3 +154,138 @@ function prevPage() {
 }
 fetchCourses();
 
+// =============================================================================
+// DOM elements
+const openFilter = document.getElementById("openFilter");
+const closeFilter = document.getElementById("closeFilter");
+const overlay = document.getElementById("overlay");
+const filterAside = document.getElementById("filterAside");
+const priceRange = document.getElementById("priceRange");
+const currentPrice = document.getElementById("currentPrice");
+const applyFilters = document.getElementById("applyFilters");
+const clearFilters = document.getElementById("clearFilters");
+
+// Open filter aside
+openFilter.addEventListener("click", function () {
+  overlay.classList.remove("hidden");
+  setTimeout(() => {
+    overlay.classList.add("opacity-100");
+    filterAside.classList.remove("-translate-x-full");
+  }, 10);
+  document.body.style.overflow = "hidden"; // Prevent scrolling
+});
+
+// Close filter aside
+function closeFilterAside() {
+  overlay.classList.remove("opacity-100");
+  filterAside.classList.add("-translate-x-full");
+  setTimeout(() => {
+    overlay.classList.add("hidden");
+  }, 300);
+  document.body.style.overflow = ""; // Restore scrolling
+}
+
+// Close button click
+closeFilter.addEventListener("click", closeFilterAside);
+
+// Close on overlay click
+overlay.addEventListener("click", function (e) {
+  if (e.target === overlay) {
+    closeFilterAside();
+  }
+});
+
+// Close on Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !overlay.classList.contains("hidden")) {
+    closeFilterAside();
+  }
+});
+
+// Price range slider functionality
+priceRange.addEventListener("input", function () {
+  currentPrice.textContent = `${this.value}`;
+});
+
+// Apply filters functionality
+applyFilters.addEventListener("click", function () {
+  const selectedFilters = {
+    categories: [],
+    levels: [],
+    priceRange: priceRange.value,
+    ratings: [],
+  };
+
+  // Collect category filters
+  document
+    .querySelectorAll(
+      'input[value="development"], input[value="business"], input[value="design"], input[value="marketing"], input[value="data-science"], input[value="it-software"]'
+    )
+    .forEach((checkbox) => {
+      if (checkbox.checked) {
+        selectedFilters.categories.push(checkbox.value);
+      }
+    });
+
+  // Collect level filters
+  document
+    .querySelectorAll(
+      'input[value="beginner"], input[value="intermediate"], input[value="advanced"], input[value="all-levels"]'
+    )
+    .forEach((checkbox) => {
+      if (checkbox.checked) {
+        selectedFilters.levels.push(checkbox.value);
+      }
+    });
+
+  // Collect rating filters
+  document.querySelectorAll('input[value$="-stars"]').forEach((checkbox) => {
+    if (checkbox.checked) {
+      selectedFilters.ratings.push(checkbox.value);
+    }
+  });
+
+  console.log("Applied Filters:", selectedFilters);
+
+  // Visual feedback
+  applyFilters.textContent = "Applied!";
+  applyFilters.classList.add("bg-emerald-600");
+  setTimeout(() => {
+    applyFilters.textContent = "Apply Filters";
+    applyFilters.classList.remove("bg-emerald-600");
+    // Close the aside after applying filters
+    closeFilterAside();
+  }, 1000);
+});
+
+// Clear all filters functionality
+clearFilters.addEventListener("click", function () {
+  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+
+  priceRange.value = 100;
+  currentPrice.textContent = "$100";
+
+  console.log("All filters cleared");
+
+  // Visual feedback
+  clearFilters.textContent = "Cleared!";
+  clearFilters.classList.add("bg-gray-300");
+  setTimeout(() => {
+    clearFilters.textContent = "Clear All";
+    clearFilters.classList.remove("bg-gray-300");
+  }, 1000);
+});
+
+// Add hover effects and animations
+document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+  checkbox.addEventListener("change", function () {
+    if (this.checked) {
+      this.parentElement.classList.add("scale-105");
+      setTimeout(() => {
+        this.parentElement.classList.remove("scale-105");
+      }, 150);
+    }
+  });
+});
