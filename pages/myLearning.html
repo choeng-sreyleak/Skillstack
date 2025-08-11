@@ -44,6 +44,9 @@
     <!-- Navigation -->
     <header>
       <!-- Navbar -->
+<!-- Navigation -->
+    <header>
+      <!-- Navbar -->
       <nav
         class="bg-white shadow-lg border-b border-gray-200 fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
       >
@@ -51,12 +54,12 @@
           <div class="flex justify-between items-center h-16">
             <!-- Logo -->
             <div class="flex items-center">
-              <img
+              <a href="../index.html"><img
                 src="../imgs/Logo.png"
                 alt="Learnode"
                 class="w-[120px] h-[120px]"
-              />
-              <a href="../index.html" class="hide-on-mobile">
+              /></a>
+              <a href="#" class="hide-on-mobile">
                 <h1 class="text-2xl font-bold ml-2">𝙎𝙆𝙄𝙇𝙇𝙎𝙏𝘼𝘾𝙆</h1>
               </a>
             </div>
@@ -64,7 +67,7 @@
             <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-0">
               <a
-                href="./course.html"
+                href="./pages/course.html"
                 class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Course
@@ -73,7 +76,7 @@
                 ></div>
               </a>
               <a
-                href="./AboutUs.html"
+                href="../pages/AboutUs.html"
                 class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 About
@@ -82,7 +85,7 @@
                 ></div>
               </a>
               <a
-                href="./contactUs.html"
+                href="./pages/contactUs.html"
                 class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 Contact Us
@@ -91,7 +94,7 @@
                 ></div>
               </a>
               <a
-                href="./myLearning.html"
+                href="../pages/myLearning.html"
                 class="group relative px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold dark:text-white transition-colors duration-300"
               >
                 My Learning
@@ -134,8 +137,8 @@
               </button>
               <!-- Desktop Login -->
               <a
-                href="./login.html"
-                class="hidden md:inline-block bg-[#40a0d9] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
+                href="../pages/login.html"
+                class="hidden md:inline-block bg-[--primary-color] hover:bg-blue-400 shimmer-effect text-white px-3 py-2 rounded-full font-medium hover:scale-105 transition-all duration-300 shadow-md"
               >
                 <i class="fas fa-sign-in-alt mr-2"></i>Login
               </a>
@@ -160,7 +163,7 @@
           <!-- Mobile Login -->
           <div class="flex justify-start px-6 py-3">
             <a
-              href="./login.html"
+              href="../pages/login.html"
               class="bg-blue-500 text-white text-sm px-4 py-1 rounded-full font-medium hover:bg-blue-600 transition-all duration-300 shadow"
             >
               <i class="fas fa-sign-in-alt mr-1"></i>Login
@@ -169,25 +172,25 @@
 
           <div class="px-6 pb-4 space-y-3">
             <a
-              href="./course.html"
+              href="./pages/course.html"
               class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fa-solid fa-pager text-blue-500 mr-2"></i> Course
             </a>
             <a
-              href="./AboutUs.html"
+              href="./pages/AboutUs.html"
               class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-info-circle text-blue-500 mr-2"></i> About
             </a>
             <a
-              href="./contactUs.html"
+              href="./pages/contactUs.html"
               class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-phone text-blue-500 mr-2"></i> Contact Us
             </a>
             <a
-              href="./myLearning.html"
+              href="./pages/myLearning.html"
               class="flex items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg dark:text-gray-300 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               <i class="fas fa-book text-blue-500 mr-2"></i>My Learning
@@ -195,6 +198,11 @@
           </div>
         </div>
       </nav>
+      <div
+        class="bg-[--primary-color] text-white text-center py-3 mt-16 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+      >
+        <p class="text-sm font-medium">Explore our new website today!</p>
+      </div>
     </header>
 
     
@@ -202,7 +210,7 @@
     <div class="w-[90%] mx-auto sm:p-0 md:3">
       <!-- Welcome Section -->
       <div
-        class="bg-white rounded-lg shadow-lg p-6 mb-6 mt-20 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+        class="bg-white rounded-lg shadow-lg p-6 mb-6 mt-24 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
       >
         <div class="mb-9 sm:p-2 lg:px-14">
           <h1 class="text-3xl font-bold text-[#40A0D9] mb-2">
@@ -217,28 +225,28 @@
         <!-- Stats Cards -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-2 md:p-9">
           <div
-            class="bg-[#40A0D9] text-white p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class=" border-4 border-[#32c71f]  p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105 items-center"
           >
-            <div class="text-3xl font-bold">12</div>
-            <div class="text-xl">Courses Completed</div>
+            <div class="text-3xl font-bold text-[#32c71f]">12</div>
+            <div class="sm:text-base lg:text-xl text-[#32c71f]">Courses Completed</div>
           </div>
           <div
-            class="bg-[#40A0D9] text-white p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class=" border-4 border-orange-400   p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="text-3xl font-bold">5</div>
-            <div class="text-xl">Active Courses</div>
+            <div class="text-3xl font-bold text-orange-400 ">5</div>
+            <div class="sm:text-base lg:text-xl text-orange-400">Active Courses</div>
           </div>
           <div
-            class="bg-[#40A0D9] text-white p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="border-4 border-red-400  text-white p-6 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="text-3xl font-bold">76%</div>
-            <div class="text-xl">Overall Progress</div>
+            <div class="text-3xl font-bold text-red-400">76%</div>
+            <div class="sm:text-base lg:text-xl text-red-400">Overall Progress</div>
           </div>
           <div
-            class="bg-[#40A0D9] text-white p-8 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class=" border-4 border-blue-600  p-8 rounded-2xl text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="text-3xl font-bold">146h</div>
-            <div class="text-xl">Total Study Time</div>
+            <div class="text-3xl font-bold text-blue-600">146h</div>
+            <div class="sm:text-base lg:text-xl text-blue-600">Total Study Time</div>
           </div>
         </div>
       </div>
@@ -282,7 +290,7 @@
                 ></div>
               </div>
               <p class="text-gray-500 mb-5 text-base dark:text-white">
-                <i class="fa-regular fa-clock"></i>&nbsp; Due 22/7/2025
+                <i class="fa-regular fa-clock"></i>&nbsp; Due 22/07/2025
               </p>
 
               <div class="flex gap-2">
@@ -334,7 +342,7 @@
                 ></div>
               </div>
               <p class="text-gray-500 mb-5 text-base dark:text-white">
-                <i class="fa-regular fa-clock"></i>&nbsp; Due 22/7/2025
+                <i class="fa-regular fa-clock"></i>&nbsp; Due 03/08/2025
               </p>
 
               <div class="flex gap-2">
@@ -387,7 +395,7 @@
                 ></div>
               </div>
               <p class="text-gray-500 mb-5 text-base dark:text-white">
-                <i class="fa-regular fa-clock"></i>&nbsp; Due 22/7/2025
+                <i class="fa-regular fa-clock"></i>&nbsp; Due 27/07/2025
               </p>
 
               <div class="flex gap-2">
@@ -436,7 +444,7 @@
                   <img
                     src="https://futureteachinstitute.com/wp-content/uploads/2023/07/html-css-beginners.jpg"
                     alt="html & css"
-                    class="rounded-full w-9 h-9"
+                    class="rounded-full w-9 h-9 object-cover"
                   />
                 </div>
                 <div>
@@ -457,7 +465,7 @@
                   <img
                     src="https://img.favpng.com/10/14/1/javascript-logo-html-comment-blog-png-favpng-ASBKnF5SBrAtVPTJjbg22zz1W.jpg"
                     alt="javascript"
-                    class="rounded-full w-9 h-9"
+                    class="rounded-full w-9 h-9 object-cover"
                   />
                 </div>
                 <div>
@@ -478,7 +486,7 @@
                   <img
                     src="https://images-cdn.openxcell.com/wp-content/uploads/2024/07/25085005/reactjs-inner.svg"
                     alt="React"
-                    class="rounded-full w-9 h-9"
+                    class="rounded-full w-9 h-9 object-cover"
                   />
                 </div>
                 <div>
@@ -499,7 +507,7 @@
                   <img
                     src="https://www.mindrops.com/images/nodejs-image.webp"
                     alt="Node.js"
-                    class="rounded-full w-9 h-9"
+                    class="rounded-full w-9 h-9 object-cover"
                   />
                 </div>
                 <div>
@@ -527,7 +535,7 @@
 
       <!-- Achievements Section -->
       <div
-        class="bg-white rounded-lg shadow-lg lg:p-6 sm:p-1 my-2 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+        class="bg-white rounded-lg shadow-lg lg:p-6 sm:p-1 my-6 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
       >
         <h2 class="text-2xl p-6 font-bold text-[#40A0D9] lg:pl-0 mt-3 mb-4">
           Achievements
@@ -535,37 +543,37 @@
 
         <div class="grid grid-cols-4 gap-3 p-3">
           <div
-            class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="bg-[#40A0D9] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="lg:text-3xl sm:text-xl mb-2">🏆</div>
-            <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">
+            <div class="lg:text-3xl sm:text-lg mb-1">🏆</div>
+            <div class="lg:text-xl sm:text-sm font-semibold text-white">
               First Course
             </div>
           </div>
 
           <div
-            class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="bg-[#40A0D9] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="lg:text-3xl sm:text-xl mb-2">⭐</div>
-            <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">
+            <div class="lg:text-3xl sm:text-lg mb-1">⭐</div>
+            <div class="lg:text-xl sm:text-sm font-semibold  text-white">
               Top Learner
             </div>
           </div>
 
           <div
-            class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="bg-[#40A0D9] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="lg:text-3xl sm:text-xl mb-2">🔥</div>
-            <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">
+            <div class="lg:text-3xl sm:text-lg mb-1">🔥</div>
+            <div class="lg:text-xl sm:text-sm font-semibold text-white">
               7-Day Streak
             </div>
           </div>
 
           <div
-            class="bg-[#00b67a] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
+            class="bg-[#40A0D9] sm:p-3 lg:p-6 rounded-lg text-center transition duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div class="lg:text-3xl sm:text-xl mb-2">📚</div>
-            <div class="lg:text-xl sm:text-sm font-semibold text-gray-700">
+            <div class="lg:text-3xl sm:text-lg mb-1">📚</div>
+            <div class="lg:text-xl sm:text-sm font-semibold text-white">
               Books worm
             </div>
           </div>
