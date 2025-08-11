@@ -102,7 +102,7 @@ function renderCards() {
   const visibleCourses = allCourses.slice(start, end);
 
   container.innerHTML = visibleCourses.map(pro => `
-      <div class="bg-white rounded-2xl shadow-lg w-full p-5">
+      <div class="w-full bg-white rounded-[12px] shadow-md p-4 flex flex-col space-y-4 dark:bg-gray-700 dark:text-white transition-colors duration-300 ">
         <div class="flex justify-center mb-4">
           <img src="${pro.thumbnail}" alt ${pro.title} class="rounded-xl w-full max-w-xs object-contain" />
         </div>
@@ -113,7 +113,6 @@ function renderCards() {
            <span class="bg-yellow-600 text-yellow-100 rounded-xl px-2 py-1 text-sm font-semibold shadow-[0_0_8px_rgba(255,223,93,0.7)]">
   ${pro.categoryName}
 </span>
-
           </div>
         </div>
         <div class="flex items-center justify-between">
