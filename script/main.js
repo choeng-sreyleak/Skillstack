@@ -303,7 +303,7 @@ async function fetchCourses() {
             <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold"> <img src="./imgs/ISTAD.png" alt=""> </div>
             <span class="text-gray-700 font-medium  dark:text-white">ISTAD</span>
              <div class="flex items-center text-gray-500">
-             <span class="text-gray-700 text-2xl p-1 font-bold dark:text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${pro.discount}</span>
+             <span class="text-gray-700 text-2xl p-1 font-bold dark:text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${pro.discount}</span>
            <span class="text-gray-500 text-md line-through dark:text-gray-300"> $${pro.price}</span>
            </div>
         </div>

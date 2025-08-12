@@ -121,7 +121,7 @@ function renderCards() {
           </div>
           <span class="text-gray-700 font-medium">ISTAD</span>
           <div class="flex items-center text-gray-500">
-            <span class="text-gray-700 text-2xl p-1 font-bold dark:text-white">$${pro.discount}</span>
+            <span class="text-gray-700 text-2xl p-1 font-bold dark:text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${pro.discount}</span>
             <span class="text-gray-500 text-md line-through dark:text-gray-300">$${pro.price}</span>
           </div>
         </div>
