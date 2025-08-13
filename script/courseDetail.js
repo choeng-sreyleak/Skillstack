@@ -1,3 +1,5 @@
+
+// ====================  =====================================
 const mobileMenuToggle = document.getElementById("mobileMenuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 const hamburgerIcon = document.getElementById("hamburgerIcon");
@@ -273,7 +275,131 @@ document.addEventListener("mousemove", function (e) {
     }px)`;
   });
 });
-// =================================================
+
+
+// ==================== Fetch API for Hero Section=====================================
+const params = new URLSearchParams(window.location.search);
+const courseId = params.get("id");
+
+async function fetchCourseDetailsPages() {
+  try {
+    const res = await fetch(`https://course-api.istad.co/api/v1/courses/${courseId}`);
+    const data = await res.json();
+
+    // Check if data exists and has the expected structure
+    if (!data) {
+      throw new Error("No data received from API");
+    }
+
+    // Handle single course object (not an array)
+    // Based on the API endpoint pattern, this likely returns a single course object
+    const course = data.content || data; // Fallback in case the structure is different
+    
+    // Create display for single course
+    const CourseDetails = `
+      <!-- Hero Section -->
+      <section class="bg-[#40a0d9] text-white py-12 md:py-16 lg:py-20 mt-16">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col lg:flex-row items-center justify-between">
+            <!-- Course Info -->
+            <div class="lg:w-2/3 mb-8 lg:mb-0">
+              <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+                ${course.title || 'Course Title'}
+              </h1>
+              <p class="text-xl mb-6 opacity-90">
+                ${course.description || 'Course Description'}
+              </p>
+              <!-- Rating and Stats -->
+              <div class="flex flex-wrap items-center gap-4 mt-6 text-sm">
+                <div class="bg-yellow-500 w-[300px] flex justify-center items-center rounded-lg p-2">
+                  <p class="text-xl font-bold opacity-90">
+                    ${course.categoryName || 'Category'}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-6 text-lg">
+                <div class="flex items-center">
+                  <i class="fas fa-play-circle mr-2"></i>
+                  <span>130 lessons</span>
+                </div>
+                <div class="text-sm opacity-75">Created by Mr. Dara</div>
+              </div>
+            </div>
+
+            <!-- Pricing Card -->
+            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-4 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 dark:border-0">
+              <!-- Media Placeholder with Play Icon -->
+              <div class="flex justify-center mb-4">
+                <div class="relative w-full">
+                  <img
+                    src="${course.thumbnail || 'https://via.placeholder.com/400x200'}"
+                    alt="Course Thumbnail"
+                    class="w-full h-48 object-cover rounded-lg shadow-md"
+                    onerror="this.src='https://via.placeholder.com/400x200'"
+                  />
+                </div>
+              </div>
+              <!-- Pricing -->
+              <div class="flex items-center justify-center mb-2 space-x-2 text-lg font-semibold">
+                <span class="text-gray-800 dark:text-white">$${course.discount || '0'}</span>
+                <span class="text-gray-400 line-through text-sm">$${course.price || '0'}</span>
+              </div>
+
+              <!-- Time Left -->
+              <p class="text-center text-sm text-red-500 mb-4">
+                <span class="font-semibold">3 hours</span> left at this price!
+              </p>
+
+              <!-- Action Buttons -->
+              <div class="space-y-2 mb-4">
+                <button class="w-full bg-[#00A0FF] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#0088CC] transform hover:scale-105 transition-all duration-200">
+                  Add to cart
+                </button>
+                <button
+                  onclick="openPaymentModal('Premium Plan', '$${course.discount || course.price || '0'}')"
+                  class="w-full border border-blue-600 text-blue-600 font-semibold py-2 px-4 rounded hover:bg-blue-50 dark:hover:bg-gray-700 transition duration-300"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+
+    // Set the innerHTML
+    const heroElement = document.getElementById("HeroCourseDetails");
+    if (heroElement) {
+      heroElement.innerHTML = CourseDetails;
+    } else {
+      console.error("Element with ID 'HeroCourseDetails' not found");
+    }
+
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    
+    // Display error message to user
+    const heroElement = document.getElementById("HeroCourseDetails");
+    if (heroElement) {
+      heroElement.innerHTML = `
+        <div class="text-center py-12">
+          <h2 class="text-2xl font-bold text-red-600 mb-4">Error Loading Course</h2>
+          <p class="text-gray-600">Unable to load course details. Please try again later.</p>
+        </div>
+      `;
+    }
+  }
+}
+
+// Call function only if courseId exists
+if (courseId) {
+  fetchCourseDetailsPages();
+} else {
+  console.error("No course ID provided in URL parameters");
+}
+// ==================== Fetch API for Related Course=====================================
+
 const url = "https://course-api.istad.co/api/v1";
 
 async function fetchCourses() {
@@ -284,7 +410,7 @@ async function fetchCourses() {
     // data.content contains the course list
     const cardDisplay = data.content.map((pro) => {
       return `
-        <div class="bg-white rounded-2xl shadow-lg w-full p-5 dark:bg-gray-800 dark:text-gray-200 transition-all duration-300 hover:scale-105 group" onClick="location.href='./pages/courseDetail.html?id=${pro.id}'"
+       <div class="bg-white rounded-2xl shadow-lg w-full p-5 dark:bg-gray-800 dark:text-gray-200 transition-all duration-300 hover:scale-105 group" onClick="location.href='./pages/courseDetail.html?id=${pro.id}'"
 >
         <div class="flex justify-center mb-4">
           <img src="${pro.thumbnail}" alt ${pro.title} class="rounded-xl w-full max-w-xs object-contain" />
@@ -301,7 +427,7 @@ async function fetchCourses() {
         </div>
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold"> <img src="./imgs/ISTAD.png" alt=""> </div>
+            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-sm font-bold"> <img src="../imgs/ISTAD.png" alt=""> </div>
             <span class="text-gray-700 font-medium  dark:text-white">ISTAD</span>
              <div class="flex items-center text-gray-500">
              <span class="text-gray-700 text-2xl p-1 font-bold dark:text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${pro.discount}</span>
@@ -313,7 +439,7 @@ async function fetchCourses() {
       `;
     });
 
-    document.getElementById("images").innerHTML = cardDisplay.join("");
+    document.getElementById("relatedCourses").innerHTML = cardDisplay.join("");
   } catch (error) {
     console.error("Error fetching data:", error);
   }
