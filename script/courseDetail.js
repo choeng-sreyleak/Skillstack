@@ -298,70 +298,57 @@ async function fetchCourseDetailsPages() {
     // Create display for single course
     const CourseDetails = `
       <!-- Hero Section -->
-      <section class="bg-[#40a0d9] text-white py-12 md:py-16 lg:py-20 mt-16">
-        <div class="container mx-auto px-4">
+      <section class="bg-[#40a0d9] text-white py-12 md:py-16 lg:py-20 mt-7">
+        <div class="container mx-auto px-3 p-5 mt-5 bg-white rounded-2xl">
           <div class="flex flex-col lg:flex-row items-center justify-between">
             <!-- Course Info -->
             <div class="lg:w-2/3 mb-8 lg:mb-0">
-              <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+              <h1 class="text-4xl lg:text-5xl font-bold mb-4 p-2 text-gray-900 dark:text-gray-500">
                 ${course.title || 'Course Title'}
               </h1>
-              <p class="text-xl mb-6 opacity-90">
+              <p class="text-md mb-6 p-2 opacity-90 text-gray-900 dark:text-gray-500">
                 ${course.description || 'Course Description'}
               </p>
-              <!-- Rating and Stats -->
-              <div class="flex flex-wrap items-center gap-4 mt-6 text-sm">
-                <div class="bg-yellow-500 w-[300px] flex justify-center items-center rounded-lg p-2">
-                  <p class="text-xl font-bold opacity-90">
+              <div class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-4 space-y-4 lg:space-y-0 mb-6">
+                <div class=" border w-[300px] flex justify-center items-center rounded-lg p-2 text-gray-900 dark:text-gray-500">
+                  <p class="text-xl font-bold opacity-90 text-gray-900 dark:text-gray-500">
                     ${course.categoryName || 'Category'}
                   </p>
                 </div>
+              
+              <!-- Rating and Stats -->  
               </div>
-              <div class="flex items-center space-x-6 text-lg">
+               <button
+                  onclick="openPaymentModal('Premium Plan', '$${course.discount || course.price || '0'}')"
+                  class=" px-5 border p-3 border-gray-600 text-gray-900 dark:text-gray-500 font-semibold py-2 rounded-md hover:bg-[#40a0d9] dark:hover:bg-gray-900 transition duration-300"
+                >
+                  Enroll Now
+                </button>
+                <span class="text-gray-700  dark:text-gray-500">$${course.discount || '0'}</span>
+                <span class="text-gray-400 line-through text-sm">$${course.price || '0'}</span>
+
+              <div class="flex items-center space-x-6 text-lg p-2">
                 <div class="flex items-center">
-                  <i class="fas fa-play-circle mr-2"></i>
-                  <span>130 lessons</span>
+                  <i class="fas fa-play-circle mr-2 "></i>
+                  <span class="text-gray-900 dark:text-gray-500">130 lessons</span>
                 </div>
-                <div class="text-sm opacity-75">Created by Mr. Dara</div>
               </div>
+              
             </div>
 
             <!-- Pricing Card -->
-            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-4 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 dark:border-0">
+            <div class="max-w-sm mx-auto  rounded-xl shadow-lg overflow-hidden border border-gray-200 p-4 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300 dark:border-0">
               <!-- Media Placeholder with Play Icon -->
               <div class="flex justify-center mb-4">
                 <div class="relative w-full">
                   <img
-                    src="${course.thumbnail || 'https://via.placeholder.com/400x200'}"
+                    src="${course.thumbnail}"
                     alt="Course Thumbnail"
                     class="w-full h-48 object-cover rounded-lg shadow-md"
                     onerror="this.src='https://via.placeholder.com/400x200'"
                   />
                 </div>
-              </div>
-              <!-- Pricing -->
-              <div class="flex items-center justify-center mb-2 space-x-2 text-lg font-semibold">
-                <span class="text-gray-800 dark:text-white">$${course.discount || '0'}</span>
-                <span class="text-gray-400 line-through text-sm">$${course.price || '0'}</span>
-              </div>
-
-              <!-- Time Left -->
-              <p class="text-center text-sm text-red-500 mb-4">
-                <span class="font-semibold">3 hours</span> left at this price!
-              </p>
-
-              <!-- Action Buttons -->
-              <div class="space-y-2 mb-4">
-                <button class="w-full bg-[#00A0FF] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#0088CC] transform hover:scale-105 transition-all duration-200">
-                  Add to cart
-                </button>
-                <button
-                  onclick="openPaymentModal('Premium Plan', '$${course.discount || course.price || '0'}')"
-                  class="w-full border border-blue-600 text-blue-600 font-semibold py-2 px-4 rounded hover:bg-blue-50 dark:hover:bg-gray-700 transition duration-300"
-                >
-                  Enroll Now
-                </button>
-              </div>
+              </div>             
             </div>
           </div>
         </div>
