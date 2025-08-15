@@ -299,36 +299,29 @@ async function fetchCourseDetailsPages() {
     const CourseDetails = `
       <!-- Hero Section -->
       <section class="bg-[#40a0d9] text-white py-12 md:py-16 lg:py-20 mt-7">
-        <div class="container mx-auto px-3 p-5 mt-5 bg-gray-200 dark:bg-gray-300 rounded-2xl">
+        <div class="container mx-auto px-9 p-5 mt-12 bg-gray-200 dark:bg-gray-900 rounded-3xl">
           <div class="flex flex-col lg:flex-row items-center justify-between">
             <!-- Course Info -->
             <div class="lg:w-2/3 mb-8 lg:mb-0">
-              <h1 class="text-4xl lg:text-5xl font-bold mb-4 p-2 text-gray-900 dark:text-gray-500">
+              <h1 class="text-4xl lg:text-5xl font-bold mb-4 p-2 text-gray-900 dark:text-white">
                 ${course.title || 'Course Title'}
               </h1>
-              <p class="text-md mb-6 p-2 opacity-90 text-gray-900 dark:text-gray-500">
+              <p class="text-md mb-6 p-2 opacity-90 text-gray-800 dark:text-gray-300">
                 ${course.description || 'Course Description'}
               </p>
               <div class="flex flex-col lg:flex-row items-center space-x-0 lg:space-x-4 space-y-4 lg:space-y-0 mb-6">
-                <div class="  flex justify-center items-center text-xl bg-yellow-600 hover:bg-amber-500 rounded-lg p-2 text-gray-900 dark:text-gray-500">
+                <div class=" px-9 flex justify-center items-center text-xl bg-yellow-600 hover:bg-amber-500 rounded-lg p-2 text-gray-900 dark:text-gray-300">
                     ${course.categoryName || 'Category'}
                 </div>
                 
               <!-- Rating and Stats -->  
               </div>
-               <button
-                  onclick="openPaymentModal('Premium Plan', '$${course.discount || course.price || '0'}')"
-                  class=" px-5 bg-blue-400 p-3 border-gray-600 text-gray-900 dark:text-gray-500 font-semibold py-2 rounded-md hover:bg-[#40a0d9] dark:hover:bg-gray-900 transition duration-300"
-                >
-                  Enroll Now
-                </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="text-gray-700 text-2xl dark:text-gray-500">$${course.discount || '0'}</span>
-                <span class="text-gray-400 line-through text-md">$${course.price || '0'}</span>
+              
 
               <div class="flex items-center space-x-6 text-lg p-2">
                 <div class="flex items-center">
                   <i class="fas fa-play-circle mr-2 "></i>
-                  <span class="text-gray-900 dark:text-gray-500">130 lessons</span>
+                  <span class="text-gray-700 dark:text-gray-500">130 lessons</span>
                 </div>
               </div>
               
@@ -344,7 +337,18 @@ async function fetchCourseDetailsPages() {
                     alt=""
                     class="w-full h-48  rounded-lg shadow-md"
                     onerror="this.src='https://via.placeholder.com/400x200'"
-                  />${course.video}
+                  />&nbsp; <br>
+                  ${course.slug}
+                  <div class=" p-5 mt-3 flex items-center justify-center">
+                   <button
+                  onclick="openPaymentModal('Premium Plan', '$${course.discount || course.price || '0'}')"
+                  class=" px-9 bg-blue-400 p-3  border-gray-600 text-gray-900 dark:text-gray-300 font-semibold py-2 rounded-md hover:bg-[#40a0d9] dark:hover:bg-gray-900 transition duration-300"
+                >
+                  Enroll Now
+                </button>&nbsp;&nbsp;
+                  <span class="text-gray-700 text-2xl dark:text-white">$${course.discount || '0'}</span>&nbsp;
+                <span class="text-gray-400 line-through text-md">$${course.price || '0'}</span>
+                  </div>
                 </div>
               </div>             
             </div>
